@@ -42,10 +42,10 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeler</title>
-    <link rel="stylesheet" href="/AltınaySav/css/footer.css">
-    <link rel="stylesheet" href="/AltınaySav/css/navbar.css">
-    <link rel="stylesheet" href="/AltınaySav/css/scroller.css">
-    <link rel="stylesheet" href="/AltınaySav/css/projeler.css"> <!-- Harici CSS dosyası -->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/scroller.css">
+    <link rel="stylesheet" href="css/projeler.css"> <!-- Harici CSS dosyası -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/sekmelogosu.jpg" type="image/x-icon">
     <style>
@@ -92,7 +92,7 @@ $conn->close();
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
-            <img src="/AltınaySav/images/Ornek.png" alt="" width="100" height="75">
+            <img src="images/Ornek.png" alt="" width="100" height="75">
         </a>
         <a class="navbar-brand header-text" href="#">Altınay Savunma Teknolojileri A.Ş.</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

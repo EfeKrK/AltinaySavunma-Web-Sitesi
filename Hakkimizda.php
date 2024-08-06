@@ -27,7 +27,7 @@ $resimDataUrl = 'data:' . $resimMimeType . ';base64,' . $resimBase64;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkımızda</title>
-    <link rel="stylesheet" href="/AltınaySav/css/navbar.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/hakkimizda.css">
@@ -38,7 +38,7 @@ $resimDataUrl = 'data:' . $resimMimeType . ';base64,' . $resimBase64;
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
-            <img src="/AltınaySav/images/Ornek.png" alt="" width="100" height="75">
+            <img src="images/Ornek.png" alt="" width="100" height="75">
         </a>
         <a class="navbar-brand header-text" href="#">Altınay Savunma Teknolojileri A.Ş.</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
