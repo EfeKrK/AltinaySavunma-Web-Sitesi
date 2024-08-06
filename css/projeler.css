@@ -1,0 +1,123 @@
+/* Genel Stiller */
+body {
+    padding-top: 3%;
+}
+
+/* Projeler Sayfası Stilleri */
+.container {
+    max-width: 1200px;
+}
+
+/* Kart Stili */
+.project-card {
+    border: 2px solid transparent; /* Varsayılan sınır, görünmez */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, border-color 0.4s ease, border-width 0.4s ease, opacity 0.8s ease !important; /* Geçiş süreleri */
+    background-color: #fff;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Kart Hover Durumu */
+.project-card:hover {
+    transform: scale(1.05)  !important; /* Kartın hover durumunda büyümesi */
+    border-color: red;
+    border-width: 2px; /* Sınır genişliği */
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    opacity: 1; /* Hover durumunda opaklık */
+}
+
+
+/* Kart Resmi Stili */
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Kart İçeriği */
+.project-card-body {
+    padding: 15px;
+}
+
+/* Kart Başlığı */
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Kart Tarihi */
+.project-date {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Kart Detayı */
+.project-detail {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Başlık için Animasyon */
+.fade-in {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pagination Stili */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5%;
+}
+
+.pagination-link {
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.pagination-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-card img {
+        height: 150px;
+    }
+}
+
+
+.btn-primary {
+    color: #fff;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); /* Kırmızıdan siyaha geçiş */
+    border-color: #000000;
+    width: 100%;
+    border: 2px solid #000000; /* Buton sınırı */
+    transition: background 0.8s ease, border-color 0.8s ease, color 0.8s ease, opacity 0.8s ease, transform 0.4s ease !important; /* Geçiş süreleri */
+    position: relative;
+    overflow: hidden; /* İçeriğin taşmasını engellemek */
+    opacity: 0.8; /* Varsayılan opaklık */
+    transform: scale(1); /* Varsayılan boyut */
+}
+
+/* Hover Durumu */
+.btn-primary:hover {
+    color: #fff;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1), rgba(0, 0, 0, 1)); /* Hover durumunda daha belirgin renk geçişi */
+    border-color: #000000;
+    opacity: 1; /* Butonun hover durumundaki opaklığı */
+    transform: scale(1.01); /* Hover durumunda %5 büyüme */
+}
+

@@ -1,0 +1,21 @@
+/* Scrollbar genel stil ayarları */
+::-webkit-scrollbar {
+    width: 7px; /* Scrollbar genişliği */
+    z-index: 9999 !important;
+}
+
+/* Scrollbar arka plan stili */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Scrollbar arka plan rengi */
+}
+
+/* Scrollbar parmak stil ayarları */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff0000, #000000); /* Scrollbar parmak (kısım) için kırmızı-siyah geçiş rengi */
+    border-radius: 10px; /* Scrollbar parmağının köşelerini yuvarlatır */
+}
+
+/* Scrollbar parmak (kısım) hover stili */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ff4d4d, #333333); /* Scrollbar parmak rengi hover efekti için kırmızı-siyah geçiş rengi */
+}

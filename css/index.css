@@ -1,0 +1,219 @@
+/* index.css */
+
+/* Genel stiller */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+body {
+    padding-top: 70px;
+}
+
+/* Üstteki Carousel */
+.carousel {
+    width: 100%;
+    height: auto; /* Yüksekliği otomatik yaparak içeriğin yüksekliği kadar yer kaplar */
+    max-height: calc(100vh - 70px); /* Maksimum yüksekliği navbar yüksekliği kadar azalt */
+    position: relative;
+    overflow: hidden;
+    margin: 0; /* Margin sıfırlama */
+    padding: 0; /* Padding sıfırlama */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Yüksekliği %100 yaparak slider yüksekliğine uyacak şekilde ayarlayın */
+    object-fit: cover; /* Resmin boyutunu bozmadan sığdırır */
+}
+
+/* Üstteki Carousel'in butonları */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none; /* Buton kenarlarını kaldır */
+    z-index: 10; /* Üstteki katman */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0; /* Üstten hizala */
+    bottom: 0; /* Alttan hizala */
+    padding: 0 10px; /* Arka planın simgelerden daha geniş olması için padding ekleyin */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 8px; /* Simgenin etrafına biraz boşluk ekleyin */
+    box-sizing: content-box; /* Padding'in genişliği etkilemesini sağlar */
+}
+
+.carousel-control-prev:focus, .carousel-control-prev:active,
+.carousel-control-next:focus, .carousel-control-next:active {
+    outline: none; /* Dış çizgiyi kaldır */
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-caption {
+    right: 10%;
+    bottom: 10%;
+    margin-bottom: 15%;
+    left: 10%;
+    padding: 0.5rem;
+    color: #fff;
+    text-align: center;
+    z-index: 5; /* İçeriğin üzerine çıkmasını sağlar */
+}
+
+.carousel-caption h5 {
+    font-size: 2.5rem; /* Küçültme */
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption p {
+    font-size: 1.5rem; /* Küçültme */
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Stiller */
+@media (max-width: 768px) {
+    .carousel-caption {
+        right: 5%;
+        left: 5%;
+        bottom: 5%;
+        padding: 0.5rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.25rem; /* Daha küçük ekranlarda font boyutunu küçült */
+    }
+
+    .carousel-caption p {
+        font-size: 0.875rem; /* Daha küçük ekranlarda font boyutunu küçült */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 35px; /* Küçültme */
+        height: 35px; /* Küçültme */
+    }
+}
+
+/* Carousel geçiş efektleri */
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item-next {
+    transform: translateX(100%);
+}
+
+.carousel-item-prev {
+    transform: translateX(-100%);
+}
+
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+    transform: translateX(0);
+}
+
+.carousel-item-next.carousel-item-end {
+    transform: translateX(100%);
+}
+
+.carousel-item-prev.carousel-item-start {
+    transform: translateX(-100%);
+}
+
+/* Card Carousel butonları */
+.card-carousel-container {
+    position: relative; /* Kapsayıcıya göre konumlandırma */
+    padding: 10px 60px;
+    
+}
+
+/* Card Carousel başlık */
+.kart-baslik {
+    position: relative;
+    z-index: 1; /* Başlığın butonlardan üstte görünmesini sağlar */
+}
+
+/* Sol buton */
+.card-carousel-container .carousel-control-prev {
+    position: absolute; /* Kapsayıcıya göre konumlandırma */
+    top: 50%; /* Kapsayıcının ortasında dikey olarak hizalama */
+    transform: translateY(-50%); /* Dikey ortalamayı ayarlama */
+    left: 0; /* Kapsayıcının sol tarafına hizalama */
+    width: 50px; /* Buton genişliği */
+    height: 50px; /* Buton yüksekliği */
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    z-index: 1050; /* Butonların diğer öğelerin üzerinde görünmesini sağlar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Sağ buton */
+.card-carousel-container .carousel-control-next {
+    position: absolute; /* Kapsayıcıya göre konumlandırma */
+    top: 50%; /* Kapsayıcının ortasında dikey olarak hizalama */
+    transform: translateY(-50%); /* Dikey ortalamayı ayarlama */
+    right: 0; /* Kapsayıcının sağ tarafına hizalama */
+    width: 50px; /* Buton genişliği */
+    height: 50px; /* Buton yüksekliği */
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    z-index: 1050; /* Butonların diğer öğelerin üzerinde görünmesini sağlar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Sol ve sağ buton simgeleri */
+.card-carousel-container .carousel-control-prev-icon,
+.card-carousel-container .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 30px; /* Simge genişliği */
+    height: 30px; /* Simge yüksekliği */
+     /* Simge etrafındaki boşluk */
+    box-sizing: content-box;
+}
+
+/* Hover durumunda simgelerin arka plan rengini değiştirme */
+.card-carousel-container .carousel-control-prev:hover .carousel-control-prev-icon,
+.card-carousel-container .carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+
+.kart-baslik {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3%;
+}

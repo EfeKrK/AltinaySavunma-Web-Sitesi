@@ -1,0 +1,84 @@
+.container {
+    max-width: 1100px !important; /* Yeni genişlik %20 küçültülmüş */
+    max-height: 800px !important;
+    margin: 0 auto;
+    padding: 12px; /* Padding değerini %20 küçült */
+    background-color: rgba(129, 129, 129, 0.9) !important; /* Yarı saydam arka plan rengi */ /* Arka plan rengi */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efektlerini birleştir */
+    color: white;
+    
+}
+
+.container:hover {
+    background-color: rgba(129, 129, 129, 0.9) !important; /* Arka plan rengi */
+    transform: scale(1.01); /* Hafif büyüme efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+}
+
+body {
+    padding-top: 70px;
+    background-image: url('../images/hakkimizdaarkaplan.jpg');
+    background-repeat: no-repeat; /* Resmin tekrar etmemesi */
+    background-attachment: fixed; /* Arka planın sabit kalması */
+    background-size: cover; /* Arka plan resmini kapsayıcı olarak ayarla */
+    background-position: center; /* Arka plan resmini ortala */
+}
+
+h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: white;
+    font-weight: bold;
+}
+
+/* Buton Stili */
+.btn-primary {
+    color: #fff;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); /* Kırmızıdan siyaha geçiş */
+    border-color: #000000 !important;
+    width: 100%;
+    border: 2px solid #000000; /* Buton sınırı */
+    transition: background 0.8s ease, border-color 0.8s ease, color 0.8s ease, opacity 0.8s ease, transform 0.3s ease !important; /* Geçiş süreleri */
+    position: relative;
+    overflow: hidden; /* İçeriğin taşmasını engellemek */
+    opacity: 0.8; /* Varsayılan opaklık */
+    transform: scale(1); /* Varsayılan boyut */
+}
+
+/* Hover Durumu */
+.btn-primary:hover {
+    color: #fff;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1), rgba(0, 0, 0, 1)); /* Hover durumunda daha belirgin renk geçişi */
+    border-color: #000000;
+    opacity: 1; /* Butonun hover durumundaki opaklığı */
+    transform: scale(1.01); /* Hover durumunda %5 büyüme */
+}
+
+
+.mb-3.checkbox-group {
+    margin-bottom: 15px;
+}
+
+.mb-3.checkbox-group input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mb-3.checkbox-group label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; /* Checkbox ve yazı arasındaki boşluk */
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Checkbox ve etiket arasındaki alan */
+    gap: 10px; /* Checkbox ile etiket arasındaki boşluk */
+    align-items: center; /* Her iki öğeyi de ortalar */
+}
+
