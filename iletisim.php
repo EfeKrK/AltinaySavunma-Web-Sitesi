@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/iletisim.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/sekmelogosu.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/sekmelogosu.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <style>
         .contact-info {

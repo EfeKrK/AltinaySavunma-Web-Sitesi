@@ -47,7 +47,7 @@ $conn->close();
     <link rel="stylesheet" href="css/scroller.css">
     <link rel="stylesheet" href="css/cards.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/sekmelogosu.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/sekmelogosu.png" type="image/x-icon">
     <style>
         .carousel-item {
             transition: transform 0.6s ease-in-out;
