@@ -68,7 +68,7 @@ p {
     font-weight: 300px;
     display: flex;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 5% !important;
 }
 
 /* Hover Efekti */
@@ -78,22 +78,55 @@ p {
 
 /* Responsive Stiller */
 @media (max-width: 768px) {
+    body {
+    
+        padding-top: 20%;
+    }
     .container.mt-5 {
-        padding-top: 5%;
-        margin-bottom: 20%;
+        padding-top: 25% !important;
+        margin-bottom: 20% !important;
     }
 
     .row {
         flex-direction: column;
+        margin-top: 20%;
+        margin-bottom: 20%;
+        
+    }
+    .row:hover {
+        transform: none; /* Hover efektiyle biraz büyütme */
     }
 
     .hakkimizda-resim {
-        margin-bottom: 20px; /* Resim ve metin arasına boşluk */
+        display: none;
     }
+
+    .social-media-icons {
+       padding-top: 10px;
+        margin-bottom: 20% !important;
+    }
+    p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        text-align:center;
+        color: #000000; /* Daha açık bir renk */
+    }
+
+    h2 {
+        text-align: center;
+        
+    }
+
+    .social-media-icons a:hover {
+        transform: none;
+        transition: none;
+    }
+
 }
 
 .container.mt-5 {
-    padding-top: 5%; /* Üstten boşluğu azaltarak yukarı taşıyın */
+    padding-top: 10%; /* Üstten boşluğu azaltarak yukarı taşıyın */
     display: flex;
     justify-content: center;
     align-items: center;

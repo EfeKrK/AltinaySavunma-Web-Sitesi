@@ -23,11 +23,26 @@ body {
     padding: 0; /* Padding sıfırlama */
 }
 
+
+
+/* Resimlere hafif bir zoom-in animasyonu eklemek için keyframe tanımı */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Carousel içindeki resimlere animasyon uygulama */
 .carousel-item img {
     width: 100%;
-    height: 100%; /* Yüksekliği %100 yaparak slider yüksekliğine uyacak şekilde ayarlayın */
-    object-fit: cover; /* Resmin boyutunu bozmadan sığdırır */
+    height: 100%;
+    object-fit: cover;
+    animation: zoomIn 10s infinite alternate ease-in-out;
 }
+
 
 /* Üstteki Carousel'in butonları */
 .carousel-control-prev, .carousel-control-next {
@@ -87,29 +102,8 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Responsive Stiller */
-@media (max-width: 768px) {
-    .carousel-caption {
-        right: 5%;
-        left: 5%;
-        bottom: 5%;
-        padding: 0.5rem;
-    }
 
-    .carousel-caption h5 {
-        font-size: 1.25rem; /* Daha küçük ekranlarda font boyutunu küçült */
-    }
 
-    .carousel-caption p {
-        font-size: 0.875rem; /* Daha küçük ekranlarda font boyutunu küçült */
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        width: 35px; /* Küçültme */
-        height: 35px; /* Küçültme */
-    }
-}
 
 /* Carousel geçiş efektleri */
 .carousel-item {
@@ -216,4 +210,28 @@ body {
     align-items: center;
     text-align: center;
     margin-bottom: 3%;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        /* Mobil görünümde her kartı ortalamak için */
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    .kart-baslik {
+        position: relative;
+        justify-content: center !important;
+        z-index: 1; /* Başlığın butonlardan üstte görünmesini sağlar */
+        margin-bottom: 5px !important;
+    }
+    
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        display: none !important;
+    }
+
+    
 }

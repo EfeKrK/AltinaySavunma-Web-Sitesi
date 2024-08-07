@@ -52,10 +52,6 @@
     margin-bottom: 3%;
 }
 
-/* Responsive Stiller */
 @media (max-width: 768px) {
-    .card {
-        margin: 5px;
-        margin-bottom: 15px; /* Daha küçük ekranlarda margin ayarları */
-    }
+    
 }

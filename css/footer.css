@@ -18,6 +18,7 @@ body {
 
 .footer {
     position: relative; /* İçeriğin sonunda footer */
+    bottom: 0;
     margin-top: auto; /* İçeriğin sonuna yapıştırır */
     width: 100%; /* Tam genişlik */
     background: linear-gradient(to right, 
@@ -35,4 +36,8 @@ body {
 .footer-container {
     color: black; /* Metin rengi */
     font-size: 0.9em !important; /* Yazı tipini küçült */
+}
+
+@media (max-width: 768px) {
+   
 }

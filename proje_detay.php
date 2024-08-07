@@ -97,12 +97,14 @@ $conn->close();
     <?php if ($detay2 && $resimDataUrl2): ?>
         <hr class="detay-araları fade-in">
         <div class="row mb-4 fade-in">
-            <div class="col-md-6">
-                <p><?php echo htmlspecialchars($detay2); ?></p>
-            </div>
+            
 
             <div class="col-md-6">
                 <img src="<?php echo $resimDataUrl2; ?>" alt="Proje Resmi 2" class="img-fluid">
+            </div>
+
+            <div class="col-md-6">
+                <p><?php echo htmlspecialchars($detay2); ?></p>
             </div>
         </div>
     <?php endif; ?>

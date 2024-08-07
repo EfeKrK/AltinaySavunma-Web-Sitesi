@@ -1,5 +1,13 @@
 /* proje-detay.css */
 
+html, body {
+    overflow-x: hidden !important; /* Yatay kaydırmayı devre dışı bırakır */
+    overflow-y: auto !important; /* Dikey kaydırmaya izin verir */
+    margin: 0; /* Sayfanın kenar boşluklarını sıfırlar */
+    padding: 0; /* Sayfanın iç boşluklarını sıfırlar */
+}
+
+
 body {
     padding-top: 60px; /* Navbar yüksekliği kadar boşluk bırakıyoruz */
     font-family: Arial, sans-serif; /* Genel yazı tipi */
@@ -50,16 +58,7 @@ p {
     padding: 15px;
 }
 
-.footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-}
 
-.footer-container {
-    margin: 0 auto;
-    max-width: 1200px;
-}
 
 @media (max-width: 768px) {
     .col-md-6 {

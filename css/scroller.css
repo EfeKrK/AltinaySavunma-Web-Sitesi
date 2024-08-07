@@ -19,3 +19,17 @@
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to bottom, #ff4d4d, #333333); /* Scrollbar parmak rengi hover efekti için kırmızı-siyah geçiş rengi */
 }
+
+
+@media (max-width: 768px) {
+    /* Webkit tarayıcılarda scrollbar'ı gizleme */
+    ::-webkit-scrollbar {
+        display: none; /* Scrollbar'ı tamamen gizler */
+    }
+
+    /* Firefox gibi diğer tarayıcılarda scrollbar'ı gizlemek için */
+    html {
+        overflow: hidden; /* Scrollbar'ı tamamen gizler */
+    }
+}
+

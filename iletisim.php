@@ -105,11 +105,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </nav>
 
-<div class="container mt-3">
+<div class="container mt-4">
     <div class="row">
         <div class="col-md-4">
             <h2>Bize Ulaşın</h2>
             <br>
+            
             <div class="contact-info">
                 <div class="icon">🏢</div>
                 <p>Hacı Akif, Makine Organize Sanayi Bölgesi,<br>41455 Dilovası/Kocaeli</p>
@@ -123,6 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p><strong>E-posta:</strong> savunma@altinay.com</p>
             </div>
         </div>
+    
         <div class="col-md-8">
             <form action="" method="post">
                 <div class="row mb-3 fade-in">
@@ -163,21 +165,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="checkbox" id="kvkk" name="kvkk" required>
                     <label for="kvkk">Kişisel Verilerin korunmasına ilişkin bilgilendirmeyi okudum / anladım</label>
                 </div>
-                <div class="mb-3 checkbox-group fade-in">
-                    <input type="checkbox" id="izin" name="izin">
-                    <label for="izin">İletişim bilgilerime kampanya, promosyon ve reklam içerikli ticari elektronik ileti gönderilmesine ve kişisel verilerimin bu amaçla işlenmesine açık rıza veriyorum.</label>
-                </div>
+                
                 <button type="submit" class="btn btn-primary">GÖNDER</button>
             </form>
         </div>
     </div>
 </div>
 
-<footer class="footer mt-auto py-2">
-    <div class="footer-container text-center">
-        <span class="text-muted">Altınay Savunma Teknolojileri A.Ş. &copy; 2024. Tüm hakları saklıdır.</span>
-    </div>
-</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 <script>
@@ -228,6 +222,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+
+<footer class="footer mt-auto py-2">
+    <div class="footer-container text-center">
+        <span class="text-muted">Altınay Savunma Teknolojileri A.Ş. &copy; 2024. Tüm hakları saklıdır.</span>
+    </div>
+    </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

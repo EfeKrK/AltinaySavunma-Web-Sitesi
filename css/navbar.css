@@ -77,3 +77,21 @@
 a.nav-link {
     margin: 0 5px;
 }
+
+@media (max-width: 768px) {
+    .navbar-brand.header-text {
+        display: none !important; /* Mobilde header-text sınıfını gizle */
+    }
+
+    .navbar-nav .nav-link.active {
+        color: black !important;
+        background-color: white;
+        padding-left: 10px;
+    }
+
+    .navbar-collapse {
+        padding-bottom: 20px; /* Navbar'ı açtığınızda alt boşluk */
+    }
+
+}
+

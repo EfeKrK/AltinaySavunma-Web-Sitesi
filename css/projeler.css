@@ -1,4 +1,11 @@
 /* Genel Stiller */
+html, body {
+    overflow-x: hidden; /* Yatay kaydırmayı devre dışı bırakır */
+    overflow-y: auto; /* Dikey kaydırmaya izin verir */
+    margin: 0; /* Sayfanın kenar boşluklarını sıfırlar */
+    padding: 0; /* Sayfanın iç boşluklarını sıfırlar */
+}
+
 body {
     padding-top: 3%;
 }
@@ -23,7 +30,7 @@ body {
 
 /* Kart Hover Durumu */
 .project-card:hover {
-    transform: scale(1.05)  !important; /* Kartın hover durumunda büyümesi */
+    transform: scale(1.02)  !important; /* Kartın hover durumunda büyümesi */
     border-color: red;
     border-width: 2px; /* Sınır genişliği */
     border-radius: 8px; /* Yuvarlatılmış köşeler */
@@ -78,7 +85,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 3% !important;
 }
 
 .pagination-link {
@@ -95,6 +102,10 @@ body {
 @media (max-width: 768px) {
     .project-card img {
         height: 150px;
+    }
+    
+    .mb-4{
+        margin-top: 30px;
     }
 }
 
