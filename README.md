@@ -14,3 +14,6 @@ Ana Özellikler:
 - İletişim ve Destek: Site, ziyaretçilerin firma ile iletişime geçmesini kolaylaştıracak iletişim formları ve destek seçenekleri sunar.
   
 Bu dinamik web sitesi, Altınay Savunma Teknolojileri'nin teknolojik ve endüstriyel katkılarını etkili bir şekilde tanıtarak, sektördeki varlığını güçlendirmeyi amaçlamaktadır.
+
+
+<h2>Halen daha geliştirilme aşamasındadır (07.08.2024)</h2>
