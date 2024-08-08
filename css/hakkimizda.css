@@ -1,4 +1,4 @@
-/* Genel Stiller */
+ 
 * {
     box-sizing: border-box; /* Padding ve border hesaplamasını içerir */
 }
@@ -34,6 +34,7 @@ p {
     margin-bottom: 40px;
     text-align: justify;
     color: #000000; /* Daha açık bir renk */
+    padding: 10px;
 }
 
 /* Resim Stili */
@@ -69,6 +70,7 @@ p {
     display: flex;
     align-items: center;
     margin-top: 5% !important;
+    
 }
 
 /* Hover Efekti */
@@ -134,16 +136,16 @@ p {
     position: relative;
 }
 
+
 .social-media-icons {
+    margin-top: 15px !important;
     position: absolute;
     bottom: 10px;
     right: 10px;
     display: flex;
     justify-content: flex-end;
-    width: 100%; /* Ebeveyn genişliğini kaplar */
-    margin-right: 15px;
-    
-    margin-bottom: 1px;
+    width: 100%;   
+    margin-bottom: 0px;
 }
 
 .social-media-icons a {
