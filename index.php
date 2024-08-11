@@ -103,6 +103,7 @@ $conn->close();
                 <div class="navbar-nav ms-auto me-5">
                     <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
                     <a class="nav-link" href="projeler.php">Projeler</a>
+                    <a class="nav-link"  href="Medya.php">Medya</a>
                     <a class="nav-link" href="hakkimizda.php">Hakkımızda</a>
                     <a class="nav-link" href="iletisim.php">İletişim</a>
                 </div>
@@ -124,7 +125,7 @@ $conn->close();
                 <?php foreach ($slides as $index => $slide): ?>
                     <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
                         <img src="data:image/jpeg;base64,<?= base64_encode($slide['resim']) ?>" class="d-block w-100" alt="<?= htmlspecialchars($slide['baslik']) ?>">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption">
                             <h5><?= htmlspecialchars($slide['baslik']) ?></h5>
                             <p><?= htmlspecialchars($slide['özet']) ?></p>
                         </div>
@@ -145,7 +146,7 @@ $conn->close();
 <!-- Card Section Normal Masaüstü -->
 <div class="container mt-4">
     <div class="card-carousel-container">
-        <h3 class="kart-baslik">Güncel Haberler</h3>
+        <h3 class="kart-baslik">Medya</h3>
         <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <?php foreach (array_chunk($cards, 4) as $index => $cardChunk): ?>
@@ -157,8 +158,8 @@ $conn->close();
                                         <img src="data:image/jpeg;base64,<?= base64_encode($card['resim']) ?>" class="card-img-top" alt="<?= htmlspecialchars($card['baslik']) ?>">
                                         <div class="card-body">
                                             <h5 class="card-title"><?= htmlspecialchars($card['baslik']) ?></h5>
-                                            <p class="card-text"><?= htmlspecialchars($card['özet']) ?>...</p>
-                                        </div>
+                                            <?= htmlspecialchars(mb_substr($card['özet'], 0, 150, 'UTF-8')) ?>...
+                                            </div>
                                         <div class="card-footer">
                                             <a href="#" class="btn btn-primary">Detayları Gör</a>
                                         </div>

@@ -74,7 +74,8 @@ $conn->close();
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto me-5">
                 <a class="nav-link" aria-current="page" href="index.php">Ana Sayfa</a>
-                <a class="nav-link" href="projeler.php">Projeler</a>
+                <a class="nav-link active" href="projeler.php">Projeler</a>
+                <a class="nav-link"  href="Medya.php">Medya</a>
                 <a class="nav-link" href="hakkimizda.php">Hakkımızda</a>
                 <a class="nav-link" href="iletisim.php">İletişim</a>
             </div>
@@ -135,7 +136,7 @@ $conn->close();
         elements.forEach((el, index) => {
             setTimeout(() => {
                 el.classList.add('visible');
-            }, index * 300); // 300 ms aralıklarla animasyonu başlat
+            }, index * 200); // 300 ms aralıklarla animasyonu başlat
         });
     });
 </script>

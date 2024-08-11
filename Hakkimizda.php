@@ -51,6 +51,7 @@ $resimDataUrl = 'data:' . $resimMimeType . ';base64,' . $resimBase64;
             <div class="navbar-nav ms-auto me-5">
                 <a class="nav-link" aria-current="page" href="index.php">Ana Sayfa</a>
                 <a class="nav-link" href="projeler.php">Projeler</a>
+                <a class="nav-link"  href="Medya.php">Medya</a>
                 <a class="nav-link active" href="hakkimizda.php">Hakkımızda</a>
                 <a class="nav-link" href="iletisim.php">İletişim</a>
             </div>

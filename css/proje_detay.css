@@ -12,6 +12,8 @@ body {
     padding-top: 60px; /* Navbar yüksekliği kadar boşluk bırakıyoruz */
     font-family: Arial, sans-serif; /* Genel yazı tipi */
     line-height: 1.6; /* Satır yüksekliği */
+    background-color: #0000001d !important;
+   
 }
 
 h1 {
@@ -19,6 +21,8 @@ h1 {
     font-size: 2.5rem; /* Başlık boyutunu büyütüyoruz */
     font-weight: bold;
     text-align: center;
+    text-shadow: 1px 1px 1px #999;
+    
 }
 
 
@@ -28,15 +32,26 @@ p {
     margin-bottom: 30px;
     font-size: 1rem; /* Paragraf yazı tipi boyutu */
     color: #333; /* Paragraf yazı rengi */
+    text-shadow: 1px 1px 1px #999;
+    font-size: 1.2rem;
 }
 
 .img-fluid {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
     margin-bottom: 20px; /* Resim altına boşluk ekliyoruz */
+    margin-right: 20px;
+    transition: transform 0.4s ease, border-color 0.4s ease, border-width 0.4s ease, opacity 0.8s ease !important; /* Geçiş süreleri */
+
 }
+
+.img-fluid:hover{
+    transform: scale(1.02);
+}
+
+
 
 .container {
     

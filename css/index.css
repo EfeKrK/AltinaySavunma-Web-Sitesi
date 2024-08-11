@@ -144,13 +144,17 @@ body {
 .card-carousel-container {
     position: relative; /* Kapsayıcıya göre konumlandırma */
     padding: 10px 60px;
-    
 }
 
 /* Card Carousel başlık */
 .kart-baslik {
     position: relative;
     z-index: 1; /* Başlığın butonlardan üstte görünmesini sağlar */
+    font-size: 2rem; /* Başlık boyutunu büyütüyoruz */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 1px #999;
+    
 }
 
 /* Sol buton */
@@ -220,11 +224,13 @@ body {
     }
 
     
+    
+    
     .kart-baslik {
         position: relative;
         justify-content: center !important;
         z-index: 1; /* Başlığın butonlardan üstte görünmesini sağlar */
-        margin-bottom: 5px !important;
+        margin-bottom: 25px !important;
     }
     
 
@@ -234,4 +240,31 @@ body {
     }
 
     
+
+    .carousel-caption {
+        position: absolute;
+        padding-bottom: 0%;
+        text-align: center !important;
+        justify-content: center !important;
+        margin-bottom: 10%;
+        margin-right: 10px;
+        width: 70%; /* Caption'ların genişliğini ayarlar */
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.2rem; /* Mobil cihazlarda başlık boyutunu küçültür */
+        font-weight: bold;
+        color: #fff; /* Metnin rengini beyaz yapar */
+        margin-bottom: 0px;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem; /* Açıklama metninin boyutunu küçültür */
+        color: #ddd; /* Açıklama metninin rengini açar */
+        margin-bottom: 0;
+    }
+    
+    
+    
 }
+

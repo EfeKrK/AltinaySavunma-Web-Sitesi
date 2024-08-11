@@ -13,6 +13,10 @@
     overflow: hidden;
 }
 
+.card-title{
+    font-weight: bolder;
+}
+
 .card:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Hover etkisi */
     transform: translateY(-5px); /* Hover etkisiyle yukarı hareket */

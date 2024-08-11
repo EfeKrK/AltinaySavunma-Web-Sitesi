@@ -1,0 +1,112 @@
+body{
+    background-color: #0000001d !important;
+    
+}
+
+
+
+.card-container {
+    display: inline-flex; /* Flexbox düzenlemesi */
+    align-items: center; /* İçeriği dikeyde ortala */
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out; /* Geçiş süresini optimize ettik */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #fff;
+    width: 100%; /* Kartların genişliğini %60 olarak ayarladık */
+    margin-left: 0;
+    margin-right: auto;
+    padding: 5px;
+    
+}
+
+.date{
+    color: #00000050;
+    margin-bottom: 20px;
+}
+
+
+
+.card-container:hover {
+    transform: scale(1.05) !important; /* Üzerine gelince kartı hafifçe büyütür */
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.2) !important; /* Hover etkisi için gölge ekler */
+}
+
+.card-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-image {
+    width: 300px;
+    height: 200px;
+    object-fit:scale-down;
+    border-right: 5px solid #ff0000;
+    margin-right: 15px; /* Resim ile içerik arasına boşluk ekle */
+}
+
+.card-content {
+    padding: 10px;
+    flex: 1; /* İçeriğin esnek olmasını sağlar */
+}
+
+.card-content h5 {
+    margin-bottom: 0px;
+    font-size: 1.25rem;
+}
+
+
+.card-content p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+.container.mt-5{
+    margin-top: 7% !important;
+    display: inline-block !important;
+}
+
+.main-content {
+    display: inline-flex; /* Flexbox düzenlemesi */
+    flex-direction: row; /* Kartlar ve diğer öğeler yatayda hizalanacak */
+    align-items: flex-start; /* Üstten hizalama */
+    gap: 20px; /* Kartlar ile diğer öğe arasına boşluk ekler */
+}
+
+.card-content .btn {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); /* Kırmızıdan siyaha geçiş */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border-color: black;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.8s ease, border-color 0.8s ease, color 0.8s ease, opacity 0.8s ease, transform 0.3s ease !important; /* Geçiş süreleri */
+
+    text-decoration: none; /* Altı çizgiyi kaldır */
+}
+
+.card-content .btn:hover {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1), rgba(0, 0, 0, 1)); /* Hover durumunda daha belirgin renk geçişi */
+    text-decoration: none; /* Altı çizgiyi kaldır */
+    border-color: black;
+    transform: scale(1.01); /* Hover durumunda %5 büyüme */
+
+}

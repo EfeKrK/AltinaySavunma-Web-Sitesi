@@ -1,3 +1,7 @@
+body{
+    font-family: "Work Sans", sans-serif !important;
+}
+
 .navbar {
     position: fixed !important;
     top: 0 !important;
@@ -33,11 +37,13 @@
 
 .navbar-brand.header-text {
     color: rgb(255, 255, 255) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     padding: 8px 15px;
     border-radius: 4px;
     text-align: center;
     font-size: 1.3rem;
     transition: transform 0.3s ease, color 0.3s ease;
+    
 }
 
 .navbar-brand.header-text:hover {
@@ -50,6 +56,7 @@
     border-radius: 5px;
     padding: 10px 15px;
     font-size: 1.10rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     font-weight: bold;
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
@@ -58,12 +65,14 @@
     color: black !important;
     background-color: white;
     transform: scale(1.05);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .navbar-nav .nav-link.active {
     color: black !important;
     background-color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-toggler {
@@ -86,12 +95,21 @@ a.nav-link {
     .navbar-nav .nav-link.active {
         color: black !important;
         background-color: white;
+        width: 110%;
         padding-left: 10px;
+        
+    
     }
+
+   
+    
 
     .navbar-collapse {
         padding-bottom: 20px; /* Navbar'ı açtığınızda alt boşluk */
     }
 
+    
+    
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
