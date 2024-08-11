@@ -1,31 +1,31 @@
-/* card.css */
 .card {
-    margin-left: 10px;
-    margin-top: 2px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
-    height: 450px; /* Sabit yükseklik belirleyin */
-    width: 250px; /* Sabit genişlik belirleyin */
+    height: 450px; /* Sabit yükseklik */
+    width: 100%; /* Kart genişliği yüzde olarak */
+    max-width: 300px; /* Maksimum genişlik */
     border: 1px solid rgba(129, 129, 129, 0.8);
     border-radius: 8px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px rgba(255, 0, 0, 0.69);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     overflow: hidden;
 }
 
-.card-title{
+.card-title {
     font-weight: bolder;
 }
 
 .card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Hover etkisi */
-    transform: translateY(-5px); /* Hover etkisiyle yukarı hareket */
+    
+    transform: translateY(-5px); /* Hover yukarı hareket */
+    box-shadow: 0 6px 10px rgb(255, 0, 0);
 }
 
 .card-img-top {
-    height: 130px !important; /* Sabit yüksekliği belirleyin */
+    height: 130px !important; /* Sabit yükseklik */
     object-fit: cover !important; /* Resmi kesmeden veya bozmadan sığdırır */
-    width: 100%; /* Resmin genişliğini kartın genişliğine göre ayarlar */
+    width: 100%; /* Resmin genişliğini karta göre ayarlar */
 }
 
 .btn-primary {
@@ -34,7 +34,7 @@
     border-color: #000000;
     width: 100%;
     border: 2px solid #000000; /* Buton sınırı */
-    transition: background 0.8s ease, border-color 0.8s ease, color 0.8s ease, opacity 0.8s ease, transform 0.3s ease !important; /* Geçiş süreleri */
+    transition: background 0.8s ease, border-color 0.8s ease, color 0.8s ease, opacity 0.8s ease, transform 0.3s ease !important;
     position: relative;
     overflow: hidden; /* İçeriğin taşmasını engellemek */
     opacity: 0.8; /* Varsayılan opaklık */
@@ -44,18 +44,41 @@
 /* Hover Durumu */
 .btn-primary:hover {
     color: #fff;
-    background: linear-gradient(45deg, rgba(255, 0, 0, 1), rgba(0, 0, 0, 1)); /* Hover durumunda daha belirgin renk geçişi */
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1), rgba(0, 0, 0, 1)); /* Daha belirgin geçiş */
     border-color: #000000;
-    opacity: 1; /* Butonun hover durumundaki opaklığı */
-    transform: scale(1.01); /* Hover durumunda %5 büyüme */
+    opacity: 1; /* Hover opaklık */
+    transform: scale(1.01); /* Hover %5 büyüme */
 }
 
 .kart-baslik {
-    align-items: center;
     text-align: center;
     margin-bottom: 3%;
 }
 
+/* Carousel içindeki kartları ortalamak için */
+.carousel-item .row {
+    display: flex;
+    justify-content: center; /* Kartları yatayda ortalar */
+}
+
+.carousel-inner .col-md-4 {
+    padding: 15px !important;
+    display: flex;
+    justify-content: center; /* Kartları sütun içinde ortalar */
+}
+
+/* Ekran genişliği 768px'in altına düştüğünde (tablet ve mobil) */
 @media (max-width: 768px) {
-    
+    .carousel-inner .col-md-4 {
+        max-width: 33.333%; /* 3 Kart Yan Yana */
+        flex: 0 0 33.333%;
+    }
+}
+
+/* Ekran genişliği 576px'in altına düştüğünde (mobil) */
+@media (max-width: 576px) {
+    .carousel-inner .col-md-4 {
+        max-width: 100%; /* Tek Kart Yan Yana */
+        flex: 0 0 100%;
+    }
 }

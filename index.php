@@ -115,7 +115,7 @@ $conn->close();
 
     <!-- Slider -->
     <div class="container-fluid p-0">
-        <div id="slider1" class="carousel slide" data-bs-ride="carousel">
+        <div id="slider1" class="carousel slide" data-bs-ride="carousel" >
             <ol class="carousel-indicators">
                 <?php foreach ($slides as $index => $slide): ?>
                     <li data-bs-target="#slider1" data-bs-slide-to="<?= $index ?>" class="<?= $index === 0 ? 'active' : '' ?>"></li>
@@ -147,9 +147,9 @@ $conn->close();
 <div class="container mt-4">
     <div class="card-carousel-container">
         <h3 class="kart-baslik">Medya</h3>
-        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
             <div class="carousel-inner">
-                <?php foreach (array_chunk($cards, 4) as $index => $cardChunk): ?>
+                <?php foreach (array_chunk($cards, 3) as $index => $cardChunk): ?>
                     <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
                         <div class="row">
                             <?php foreach ($cardChunk as $card): ?>
