@@ -1,9 +1,8 @@
-body{
+/* Genel Ayarlar */
+body {
     background-color: #0000001d !important;
-    
+    overflow-y: auto !important;
 }
-
-
 
 .card-container {
     display: inline-flex; /* Flexbox düzenlemesi */
@@ -21,15 +20,12 @@ body{
     margin-left: 0;
     margin-right: auto;
     padding: 5px;
-    
 }
 
-.date{
+.date {
     color: #00000050;
     margin-bottom: 20px;
 }
-
-
 
 .card-container:hover {
     transform: scale(1.05) !important; /* Üzerine gelince kartı hafifçe büyütür */
@@ -44,7 +40,7 @@ body{
 .card-image {
     width: 300px;
     height: 200px;
-    object-fit:scale-down;
+    object-fit: scale-down;
     border-right: 5px solid #ff0000;
     margin-right: 15px; /* Resim ile içerik arasına boşluk ekle */
 }
@@ -59,7 +55,6 @@ body{
     font-size: 1.25rem;
     text-shadow: 1px 1px 1px #999;
 }
-
 
 .card-content p {
     margin-bottom: 10px;
@@ -77,7 +72,7 @@ body{
     text-decoration: underline;
 }
 
-.container.mt-5{
+.container.mt-5 {
     margin-top: 7% !important;
     display: inline-block !important;
 }
@@ -100,7 +95,6 @@ body{
     font-size: 0.9rem;
     font-weight: bold;
     transition: background 0.8s ease, border-color 0.8s ease, color 0.8s ease, opacity 0.8s ease, transform 0.3s ease !important; /* Geçiş süreleri */
-
     text-decoration: none; /* Altı çizgiyi kaldır */
 }
 
@@ -109,5 +103,37 @@ body{
     text-decoration: none; /* Altı çizgiyi kaldır */
     border-color: black;
     transform: scale(1.01); /* Hover durumunda %5 büyüme */
+}
 
+/* Mobil Ayarlar */
+@media (max-width: 768px) {
+    body{
+        padding-top: 50px;
+    }
+    .card-container {
+        
+        flex-direction: column; /* Resim üstte, içerik altta olacak şekilde dikey hizalama */
+        align-items: center; /* İçeriği ortala */
+        padding: 10px; /* Padding artırıldı */
+        overflow-y: auto !important; /* Dikey kaydırma çubuğunu etkinleştirir */
+        max-height: 100vh; /* Kartın yüksekliğini ekran yüksekliğine göre sınırla */
+    }
+
+    .card-image {
+        width: 100%; /* Resmi genişliği %100 yaparak ekran genişliğine göre ayarlama */
+        height: auto; /* Yükseklik otomatik olarak ayarlanacak */
+        margin-right: 0; /* Sağ boşluğu kaldır */
+        margin-bottom: 10px; /* Resim ile içerik arasına boşluk ekle */
+        border-right: none; /* Sağ kenar sınırını kaldır */
+        border-bottom: 5px solid #ff0000; /* Alt kenar sınırı ekle */
+    }
+
+    .card-content {
+        text-align: center; /* İçeriği ortala */
+    }
+
+    .card-container:hover {
+        transform: none !important; /* Üzerine gelince kartı hafifçe büyütür */
+        box-shadow: none !important; /* Hover etkisi için gölge ekler */
+    }
 }

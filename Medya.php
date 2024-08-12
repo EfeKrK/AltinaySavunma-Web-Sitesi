@@ -26,7 +26,7 @@ $result = $conn->query($sql);
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 <img src="images/Ornek.png" alt="" width="100" height="75">
             </a>
             <a class="navbar-brand header-text" href="#">Altınay Savunma Teknolojileri A.Ş.</a>

@@ -181,6 +181,41 @@ $conn->close();
         </div>
     </div>
 
+
+     <!-- Card Section Mobile Görünümde Gözüken -->
+     <div class="container mt-4-mobile">
+        <div class="card-carousel-container-mobile">
+            <h3 class="kart-baslik">Medya</h3>
+            <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <?php foreach (array_chunk($cards, 1) as $index => $cardChunk): ?>
+                        <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
+                            <div class="row-mobile">
+                                <?php foreach ($cardChunk as $card): ?>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img src="data:image/jpeg;base64,<?= base64_encode($card['resim']) ?>" class="card-img-top" alt="<?= htmlspecialchars($card['baslik']) ?>">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?= htmlspecialchars($card['baslik']) ?></h5>
+                                                <?= htmlspecialchars(mb_substr($card['özet'], 0, 150, 'UTF-8')) ?>...
+                                            </div>
+                                            <div class="card-footer">
+                                                <a href="medya_Detaylar.php?id=<?= $card['id'] ?>" class="btn btn-primary">Detayları Gör</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <!-- Sol ve sağ butonlar -->
+                
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <br>

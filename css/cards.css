@@ -67,8 +67,23 @@
     padding: 0; /* Kartlar arasındaki boşluğu azaltır */
 }
 
+.card-carousel-container-mobile{
+    display: none;
+}
+
+
+
 /* Ekran genişliği 768px'in altına düştüğünde (tablet ve mobil) */
 @media (max-width: 768px) {
+
+    .card-carousel-container-mobile{
+        display:inline;    
+        }
+
+        .card-carousel-container{
+            display: none;
+        }
+
     .carousel-inner .col-md-4 {
         max-width: 33.333%; /* 3 Kart Yan Yana */
         flex: 0 0 33.333%;
