@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-    padding-top: 60px;
+    padding-top: 50px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-image: url('../images/hangar.jpg');
@@ -35,16 +35,14 @@ p {
     color: #333;
     text-shadow: 1px 1px 1px #999;
     color: white;
-    background-color: rgba(0, 0, 0, 0.685);
-    padding: 15px;
-    border-radius: 10px;
+    
 }
 
 .img-fluid {
     max-width: 100%; /* Resmin genişliğini %100 yapar */
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.777);
     margin-bottom: 20px;
     transition: transform 0.4s ease, border-color 0.4s ease, border-width 0.4s ease, opacity 0.8s ease !important;
 }
@@ -69,8 +67,10 @@ p {
 
 .col-md-6 {
     flex: 1;
-    padding: 15px;
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.685);
+    padding: 25px !important;
+    border-radius: 10px;
 }
 
 .col-md-6 img {

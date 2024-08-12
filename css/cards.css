@@ -32,7 +32,7 @@
     background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); /* Kırmızıdan siyaha geçiş */
     border-color: #000000;
     width: 100%;
-    border: 2px solid #000000; /* Buton sınırı */
+    border: 2px solid #000000 !important; /* Buton sınırı */
     transition: background 0.8s ease, border-color 0.8s ease, color 0.8s ease, opacity 0.8s ease, transform 0.3s ease !important;
     position: relative;
     overflow: hidden; /* İçeriğin taşmasını engellemek */

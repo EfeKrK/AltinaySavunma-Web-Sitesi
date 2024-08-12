@@ -25,7 +25,7 @@ body {
     border: 2px solid transparent; /* Varsayılan sınır, görünmez */
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.679);
     transition: transform 0.4s ease, border-color 0.4s ease, border-width 0.4s ease, opacity 0.3s ease, background-color 0.5 ease !important; /* Opaklık geçiş süresi artırıldı */
     background-color: #ffffffaa;
     position: relative;
@@ -36,7 +36,7 @@ body {
 /* Kart Hover Durumu */
 .project-card:hover {
     transform: scale(1.02) !important; /* Kartın hover durumunda büyümesi */
-    border-color: red;
+    border-color: rgba(255, 0, 0, 0.603);
     
     border-width: 2px; /* Sınır genişliği */
     border-radius: 8px; /* Yuvarlatılmış köşeler */
@@ -120,7 +120,7 @@ body {
 .btn-primary {
     color: #fff;
     background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); /* Kırmızıdan siyaha geçiş */
-    border-color: #000000;
+    border-color: #000000 !important;
     width: 100%;
     border: 2px solid #000000; /* Buton sınırı */
     transition: background 0.8s ease, border-color 0.8s ease, color 0.8s ease, opacity 0.8s ease, transform 0.4s ease !important; /* Geçiş süreleri */

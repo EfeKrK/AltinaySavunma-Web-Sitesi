@@ -94,7 +94,7 @@ $conn->close();
         <a class="navbar-brand" href="index.php">
             <img src="images/Ornek.png" alt="" width="100" height="75">
         </a>
-        <a class="navbar-brand header-text" href="#">Altınay Savunma Teknolojileri A.Ş.</a>
+        <a class="navbar-brand header-text" href="index.php">Altınay Savunma Teknolojileri A.Ş.</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

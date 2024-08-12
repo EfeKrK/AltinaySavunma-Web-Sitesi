@@ -9,7 +9,7 @@ html, body {
 
 
 body {
-    padding-top: 60px; /* Navbar yüksekliği kadar boşluk bırakıyoruz */
+    padding-top: 45px; /* Navbar yüksekliği kadar boşluk bırakıyoruz */
     font-family: Arial, sans-serif; /* Genel yazı tipi */
     line-height: 1.6; /* Satır yüksekliği */
     background-image: url('../images/hangar.jpg');
@@ -40,7 +40,7 @@ p {
     color: #ffffff; /* Paragraf yazı rengi */
     text-shadow: 1px 1px 1px #999;
     font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.437);
+    
     padding: 15px;
     border-radius: 10px;
 }
@@ -48,8 +48,8 @@ p {
 .img-fluid {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+    
+    box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5);
     margin-bottom: 20px; /* Resim altına boşluk ekliyoruz */
     margin-right: 20px;
     transition: transform 0.4s ease, border-color 0.4s ease, border-width 0.4s ease, opacity 0.8s ease !important; /* Geçiş süreleri */
@@ -74,6 +74,9 @@ p {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.437);
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .col-md-6 {

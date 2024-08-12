@@ -24,8 +24,8 @@ body {
     background: linear-gradient(to right, 
         rgba(255, 0, 0, 0.8) 0%, 
         rgba(255, 0, 0, 0.5) 5%, 
-        rgba(210, 210, 210, 0.8) 15%, 
-        rgba(210, 210, 210, 0.8) 85%, 
+        rgba(210, 210, 210, 0.7) 15%, 
+        rgba(210, 210, 210, 0.7) 85%, 
         rgba(255, 0, 0, 0.5) 95%, 
         rgba(255, 0, 0, 0.8) 100%) !important; /* Yumuşak gradient geçişi */
     text-align: center; /* Metin hizalama */
