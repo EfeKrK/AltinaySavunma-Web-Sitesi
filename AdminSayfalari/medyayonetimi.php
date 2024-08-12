@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="sidebar">
+    <div class="logo-container">
+            <img src="../images/adminpanellogo.png" alt="Admin Logo" class="logo">
+        </div>
         <h2>Admin Paneli</h2>
         <div class="menu">
             <ul>
