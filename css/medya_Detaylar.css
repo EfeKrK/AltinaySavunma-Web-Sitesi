@@ -1,0 +1,86 @@
+/* medya_Detaylar.css */
+
+html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0000001d !important;
+}
+
+h1 {
+    margin-bottom: 25px !important;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 1px #999;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #333;
+    text-shadow: 1px 1px 1px #999;
+}
+
+.img-fluid {
+    max-width: 100%; /* Resmin genişliğini %100 yapar */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, border-color 0.4s ease, border-width 0.4s ease, opacity 0.8s ease !important;
+}
+
+.img-fluid:hover {
+    transform: scale(1.02);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.col-md-6 {
+    flex: 1;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.col-md-6 img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%; /* Küçük ekranlarda tam genişlik */
+        max-width: 100%; /* Tam genişlik */
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

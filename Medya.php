@@ -80,7 +80,7 @@ $result = $conn->query($sql);
             cards.forEach((card, index) => {
                 setTimeout(() => {
                     card.classList.add('show');
-                }, index * 200); // Her kartın sırasıyla görünmesini sağlamak için gecikme
+                }, index * 300); // Her kartın sırasıyla görünmesini sağlamak için gecikme
             });
         });
     </script>

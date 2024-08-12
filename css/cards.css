@@ -1,5 +1,5 @@
 .card {
-    margin: 15px;
+    margin: 15px; /* Kartlar arasındaki boşluğu azalt */
     display: flex;
     flex-direction: column;
     height: 450px; /* Sabit yükseklik */
@@ -17,7 +17,6 @@
 }
 
 .card:hover {
-    
     transform: translateY(-5px); /* Hover yukarı hareket */
     box-shadow: 0 6px 10px rgb(255, 0, 0);
 }
@@ -59,12 +58,13 @@
 .carousel-item .row {
     display: flex;
     justify-content: center; /* Kartları yatayda ortalar */
+    margin: 0; /* Satır arasındaki boşluğu kaldırır */
 }
 
 .carousel-inner .col-md-4 {
-    padding: 15px !important;
     display: flex;
     justify-content: center; /* Kartları sütun içinde ortalar */
+    padding: 0; /* Kartlar arasındaki boşluğu azaltır */
 }
 
 /* Ekran genişliği 768px'in altına düştüğünde (tablet ve mobil) */

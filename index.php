@@ -3,7 +3,7 @@
 include 'database.php';
 
 // slider tablosundan son 8 projeyi çek
-$sql_slider = "SELECT baslik, özet, resim FROM slider ORDER BY tarih DESC LIMIT 8";
+$sql_slider = "SELECT id, baslik, özet, resim FROM slider ORDER BY tarih DESC LIMIT 8";
 $result_slider = $conn->query($sql_slider);
 
 // Slider verilerini tutmak için dizi oluştur
@@ -17,8 +17,8 @@ if ($result_slider->num_rows > 0) {
     echo "0 results";
 }
 
-// Kartlar tablosundan son 4 kartı çek
-$sql_kartlar = "SELECT baslik, özet, resim FROM kartlar ORDER BY tarih DESC LIMIT 10";
+// Kartlar tablosundan son 10 kartı çek
+$sql_kartlar = "SELECT id, baslik, özet, resim FROM kartlar ORDER BY tarih DESC LIMIT 10";
 $result_kartlar = $conn->query($sql_kartlar);
 
 // Kart verilerini tutmak için dizi oluştur
@@ -103,7 +103,7 @@ $conn->close();
                 <div class="navbar-nav ms-auto me-5">
                     <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
                     <a class="nav-link" href="projeler.php">Projeler</a>
-                    <a class="nav-link"  href="Medya.php">Medya</a>
+                    <a class="nav-link" href="Medya.php">Medya</a>
                     <a class="nav-link" href="hakkimizda.php">Hakkımızda</a>
                     <a class="nav-link" href="iletisim.php">İletişim</a>
                 </div>
@@ -111,11 +111,9 @@ $conn->close();
         </div>
     </nav>
 
-    
-
     <!-- Slider -->
     <div class="container-fluid p-0">
-        <div id="slider1" class="carousel slide" data-bs-ride="carousel" >
+        <div id="slider1" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">
                 <?php foreach ($slides as $index => $slide): ?>
                     <li data-bs-target="#slider1" data-bs-slide-to="<?= $index ?>" class="<?= $index === 0 ? 'active' : '' ?>"></li>
@@ -143,54 +141,47 @@ $conn->close();
         </div>
     </div>
 
-<!-- Card Section Normal Masaüstü -->
-<div class="container mt-4">
-    <div class="card-carousel-container">
-        <h3 class="kart-baslik">Medya</h3>
-        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-            <div class="carousel-inner">
-                <?php foreach (array_chunk($cards, 3) as $index => $cardChunk): ?>
-                    <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-                        <div class="row">
-                            <?php foreach ($cardChunk as $card): ?>
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <img src="data:image/jpeg;base64,<?= base64_encode($card['resim']) ?>" class="card-img-top" alt="<?= htmlspecialchars($card['baslik']) ?>">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?= htmlspecialchars($card['baslik']) ?></h5>
-                                            <?= htmlspecialchars(mb_substr($card['özet'], 0, 150, 'UTF-8')) ?>...
+    <!-- Card Section Normal Masaüstü -->
+    <div class="container mt-4">
+        <div class="card-carousel-container">
+            <h3 class="kart-baslik">Medya</h3>
+            <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <?php foreach (array_chunk($cards, 2) as $index => $cardChunk): ?>
+                        <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
+                            <div class="row">
+                                <?php foreach ($cardChunk as $card): ?>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img src="data:image/jpeg;base64,<?= base64_encode($card['resim']) ?>" class="card-img-top" alt="<?= htmlspecialchars($card['baslik']) ?>">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?= htmlspecialchars($card['baslik']) ?></h5>
+                                                <?= htmlspecialchars(mb_substr($card['özet'], 0, 150, 'UTF-8')) ?>...
                                             </div>
-                                        <div class="card-footer">
-                                            <a href="#" class="btn btn-primary">Detayları Gör</a>
+                                            <div class="card-footer">
+                                                <a href="medya_Detaylar.php?id=<?= $card['id'] ?>" class="btn btn-primary">Detayları Gör</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </div>
+                <!-- Sol ve sağ butonlar -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
-        <!-- Sol ve sağ butonlar -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-</div>
-
-
-       
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-   
 
     <br>
     
@@ -206,9 +197,9 @@ $conn->close();
     <br>
 
     <footer class="footer mt-auto py-2">
-    <div class="footer-container text-center">
-        <span class="text-muted">Altınay Savunma Teknolojileri A.Ş. &copy; 2024. Tüm hakları saklıdır.</span>
-    </div>
+        <div class="footer-container text-center">
+            <span class="text-muted">Altınay Savunma Teknolojileri A.Ş. &copy; 2024. Tüm hakları saklıdır.</span>
+        </div>
     </footer>
 
 </body>

@@ -57,6 +57,7 @@ body{
 .card-content h5 {
     margin-bottom: 0px;
     font-size: 1.25rem;
+    text-shadow: 1px 1px 1px #999;
 }
 
 
