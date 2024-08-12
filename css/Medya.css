@@ -1,6 +1,10 @@
 /* Genel Ayarlar */
 body {
-    background-color: #0000001d !important;
+    background-image: url('../images/hangar.jpg');
+    background-repeat: no-repeat; /* Resmin tekrar etmemesi */
+    background-attachment: fixed; /* Arka planın sabit kalması */
+    background-size: cover; /* Arka plan resmini kapsayıcı olarak ayarla */
+    background-position: center; /* Arka plan resmini ortala */
     overflow-y: auto !important;
 }
 
@@ -20,6 +24,7 @@ body {
     margin-left: 0;
     margin-right: auto;
     padding: 5px;
+    background-color: #ffffffdb;
 }
 
 .date {

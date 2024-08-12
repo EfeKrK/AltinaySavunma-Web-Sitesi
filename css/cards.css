@@ -88,6 +88,11 @@
         max-width: 33.333%; /* 3 Kart Yan Yana */
         flex: 0 0 33.333%;
     }
+
+    .card:hover {
+        transform: none; /* Hover yukarı hareket */
+        
+    }
 }
 
 /* Ekran genişliği 576px'in altına düştüğünde (mobil) */

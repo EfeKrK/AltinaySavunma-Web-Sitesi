@@ -5,13 +5,18 @@ html, body {
     overflow-y: auto !important;
     margin: 0;
     padding: 0;
+    
 }
 
 body {
     padding-top: 60px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #0000001d !important;
+    background-image: url('../images/hangar.jpg');
+    background-repeat: no-repeat; /* Resmin tekrar etmemesi */
+    background-attachment: fixed; /* Arka planın sabit kalması */
+    background-size: cover; /* Arka plan resmini kapsayıcı olarak ayarla */
+    background-position: center; /* Arka plan resmini ortala */
 }
 
 h1 {
@@ -20,6 +25,7 @@ h1 {
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px 1px #999;
+    color: white;
 }
 
 p {
@@ -28,6 +34,10 @@ p {
     font-size: 1.2rem;
     color: #333;
     text-shadow: 1px 1px 1px #999;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.685);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .img-fluid {
