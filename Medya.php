@@ -16,7 +16,6 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/scroller.css">
     <link rel="stylesheet" href="css/Medya.css">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/sekmelogosu.png" type="image/x-icon">
     <style>

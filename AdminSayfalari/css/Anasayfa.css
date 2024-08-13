@@ -17,7 +17,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #111111cb;
     padding-top: 20px;
 }
 
@@ -39,7 +39,7 @@ body {
     text-align: center;
     background-color: #ff0000; 
     padding: 10px;
-    text-decoration: underline;
+    
 }
 
 .menu ul {

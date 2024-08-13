@@ -95,6 +95,8 @@ $result = $conn->query($sql);
                 <?php endif; ?>
             </div>
             <button type="submit" name="delete" class="delete-button">Sil Seçilenler</button>
+            <a href="sliderekle.php" class="add-button">Yeni Ekle</a>
+
         </form>
     </div>
 

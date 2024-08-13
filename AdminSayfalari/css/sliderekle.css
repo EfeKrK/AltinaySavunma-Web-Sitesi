@@ -1,0 +1,80 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Genel stil */
+.header {
+    color: #fff; /* Başlık rengini beyaz yap */
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #00000084;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 125px;
+    text-shadow: 3px 3px 3px #999;
+}
+
+/* Form stilleri */
+form {
+    display: inline-block;
+    margin-top: 20px;
+    width: 65%;
+    background-color: #00000084;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+
+/* Form etiketleri ve input stilleri */
+label {
+    display: flex;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100px;
+    color: #fff; /* Etiket rengini beyaz yap */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555; /* Koyu gri sınır rengi */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Koyu gri arka plan rengi */
+    color: #000000; /* Yazı rengini beyaz yap */
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+    color: white;
+}
+
+select {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff; /* Koyu gri sınır rengi */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #222; /* Koyu gri arka plan rengi */
+    color: #fff; /* Yazı rengini beyaz yap */
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #2bff00; /* Yeşil buton arka plan rengi */
+    color: #fff; /* Buton yazı rengi beyaz */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s ease, color 0.5s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #82ff5d; /* Hover etkisi için açık yeşil */
+}
