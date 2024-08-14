@@ -1,0 +1,104 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+/* Main Content CSS */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    max-width: 75%;
+    text-align: center;
+    color: white;
+    background-color: #111111b2;
+    padding: 15px;
+    border-radius: 15px;
+    text-shadow: 3px 3px 3px #999;
+}
+
+
+
+/* Project Cards CSS */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.project-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    background-color: #222;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+}
+
+/* Kartlar görünür hale geldiğinde uygulanacak stil */
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-slider {
+    margin-bottom: 15px;
+}
+
+.slider-images img {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Buttons */
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a;
+}
+
+.add-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
