@@ -1,0 +1,41 @@
+/* iletisimDetay.css */
+
+/* Ana içerik alanı */
+.content {
+    margin-left: 250px;
+    justify-content: center; 
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, 0.745);
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    width: 13%;
+    border-radius: 15px;
+}
+
+.message-details p {
+    
+    font-size: 16px;
+    line-height: 1.5;
+    
+}
+
+.message-details{
+    background-color: rgba(0, 0, 0, 0.607);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.message-details strong {
+    display: inline-block;
+    width: 100px;
+    
+}

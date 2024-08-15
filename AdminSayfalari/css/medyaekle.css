@@ -1,0 +1,139 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+
+/* Ana İçerik */
+.content {
+    margin-left: 350px;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #111111b2;
+    max-width: 35.5%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    text-shadow: 3px 3px 3px #999;
+}
+
+/* Butonlar */
+.delete-button {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
+.add-button {
+    background: linear-gradient(45deg, rgba(13, 255, 0, 0.9), rgba(178, 255, 168, 0.9));
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.add-button:hover {
+    background-color: rgb(55, 255, 0);
+    opacity: 1;
+}
+
+/* Uyarı Mesajları */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.alert.success {
+    background-color: #4caf50;
+}
+
+.alert.error {
+    background-color: #f44336;
+}
+
+/* Form */
+form {
+    max-width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.486);
+    border-radius: 15px;
+    display: inline-block;
+}
+
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#içerik{
+height: 130px;
+
+}
+
+form input[type="text"],
+form textarea {
+    border-radius: 5px;
+    width: 100%;
+    padding-bottom: 15px;
+    margin: 5px 0 15px;
+    font-size: medium;
+    display: inline-block;
+}
+
+form input[type="file"]{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    font-weight: bolder;
+}
+
+
+
+
+form input[type="submit"] {
+    background: linear-gradient(45deg, rgba(13, 255, 0, 0.9), rgba(178, 255, 168, 0.9));
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: rgb(55, 255, 0);
+    opacity: 1;
+}

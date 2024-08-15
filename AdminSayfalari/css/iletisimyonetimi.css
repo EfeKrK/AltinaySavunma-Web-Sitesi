@@ -1,0 +1,49 @@
+/* iletisimYonetimi.css */
+
+/* Ana içerik alanı */
+.content {
+    margin-left: 250px; /* Sidebar genişliği kadar boşluk bırak */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    background-color: #111111b2;
+    text-shadow: 3px 3px 3px #999;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.detaytikla{
+    width: 200px;
+}
+.message-table {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.message-table th,
+.message-table td {
+    border: 1px solid #696969;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.message-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.message-table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 10px;
+}

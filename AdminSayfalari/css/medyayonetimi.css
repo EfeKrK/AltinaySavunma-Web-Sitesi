@@ -6,11 +6,8 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-
-
-
 /* Main Content CSS */
-.main-content {
+.medya-content {
     margin-left: 270px;
     padding: 20px;
 }
@@ -27,17 +24,14 @@ h1 {
     text-shadow: 3px 3px 3px #999;
 }
 
-
-
-/* Project Cards CSS */
-.project-list {
+/* Medya Cards CSS */
+.medya-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-
-.project-card {
+.medya-card {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -50,37 +44,33 @@ h1 {
 }
 
 /* Kartlar görünür hale geldiğinde uygulanacak stil */
-.project-card.visible {
+.medya-card.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.project-card h2 {
+.medya-card h2 {
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-.project-details p {
+.medya-details p {
     word-wrap: break-word; /* Uzun kelimelerin satır dışına taşmasını engeller */
     white-space: pre-wrap; /* Satır sonlarını ve boşlukları korur, uzun satırları alt satıra geçirir */
     overflow-wrap: break-word; /* Kelimeleri böler ve alt satıra geçirir */
     margin-bottom: 10px; /* Paragraflar arasında boşluk bırakır */
-    /* İsteğe bağlı: çok uzun metinlerin belirli bir yüksekliğe sığması için */
-    /* İsteğe bağlı: uzun metinlerde dikey kaydırma ekler */
 }
 
-.project-slider {
+.medya-slider {
     margin-bottom: 15px;
 }
 
-.slider-images img {
-    display: none;
+.medya-images img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Buttons */
 .delete-button {
     background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
     color: white;

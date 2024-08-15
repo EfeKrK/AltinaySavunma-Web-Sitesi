@@ -1,0 +1,88 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Genel stil */
+.header {
+    color: #fff; /* Başlık rengini beyaz yap */
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #00000084;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 125px;
+    text-shadow: 3px 3px 3px #999;
+}
+
+/* Form stilleri */
+form {
+    display: inline-block;
+    margin-top: 20px;
+    width: 65%;
+    background-color: #00000084;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+
+/* Form etiketleri ve input stilleri */
+label {
+    display: flex;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100px;
+    color: #fff; /* Etiket rengini beyaz yap */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555; /* Koyu gri sınır rengi */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Koyu gri arka plan rengi */
+    color: #000000; /* Yazı rengini beyaz yap */
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+    color: white;
+}
+
+select {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff; /* Koyu gri sınır rengi */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #222; /* Koyu gri arka plan rengi */
+    color: #fff; /* Yazı rengini beyaz yap */
+}
+
+input[type="submit"] {
+    background: linear-gradient(45deg, rgba(13, 255, 0, 0.9), rgba(178, 255, 168, 0.9));
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(55, 255, 0);
+    opacity: 1;
+}
+
+
+
+
