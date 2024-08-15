@@ -159,6 +159,7 @@ $conn->close();
         const projectCards = document.querySelectorAll('.project-card');
         const title = document.getElementById('projects-title');
         title.classList.add('visible');
+        
         projectCards.forEach((card, index) => {
             setTimeout(() => {
                 card.classList.add('visible');
