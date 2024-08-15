@@ -29,7 +29,7 @@ $result = $conn->query($sql);
     <title>Slider Yönetimi</title>
     <link rel="stylesheet" href="css/AnaSayfa.css">
     <link rel="stylesheet" href="css/slideryonetimi.css">
-    <link rel="shortcut icon" src="../images/admin-panel.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/admin-panel.png" type="image/x-icon">
     <!-- SweetAlert CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <style>

@@ -57,6 +57,7 @@ $conn->close();
     <title>Hakkımızda Yönetimi</title>
     <link rel="stylesheet" href="css/AnaSayfa.css">
     <link rel="stylesheet" href="css/hakkimizdayonetim.css">
+    <link rel="shortcut icon" href="../images/admin-panel.png" type="image/x-icon">
 </head>
 <body>
     <div class="sidebar">

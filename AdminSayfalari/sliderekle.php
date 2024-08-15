@@ -56,6 +56,7 @@ if(isset($_POST['ekle'])) {
     <title>Slider Ekle</title>
     <link rel="stylesheet" href="css/AnaSayfa.css">
     <link rel="stylesheet" href="css/sliderekle.css">
+    <link rel="shortcut icon" href="../images/admin-panel.png" type="image/x-icon">
 </head>
 <body>
 <div class="sidebar">

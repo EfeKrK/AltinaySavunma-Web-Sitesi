@@ -34,6 +34,7 @@ $result = $conn->query($sql);
     <title>Admin Panel</title>
     <link rel="stylesheet" href="css/AnaSayfa.css">
     <link rel="stylesheet" href="css/medyaYonetimi.css">
+    <link rel="shortcut icon" href="../images/admin-panel.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </head>

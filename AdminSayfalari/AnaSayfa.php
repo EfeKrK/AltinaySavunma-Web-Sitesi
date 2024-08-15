@@ -6,6 +6,8 @@
     <title>Admin Panel</title>
     <link rel="stylesheet" href="css/AnaSayfa.css">
     <link rel="stylesheet" href="css/AnaSayfa1.css">
+    <link rel="shortcut icon" href="../images/admin-panel.png" type="image/x-icon">
+
 </head>
 <body>
     <div class="sidebar">

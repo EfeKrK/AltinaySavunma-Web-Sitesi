@@ -15,6 +15,7 @@ $result = $conn->query($sql);
     <title>İletişim Yönetimi</title>
     <link rel="stylesheet" href="css/AnaSayfa.css">
     <link rel="stylesheet" href="css/iletisimYonetimi.css">
+    <link rel="shortcut icon" href="../images/admin-panel.png" type="image/x-icon">
 </head>
 <body>
     <div class="sidebar">

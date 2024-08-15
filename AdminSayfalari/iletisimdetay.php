@@ -28,6 +28,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     <title>Mesaj Detayı</title>
     <link rel="stylesheet" href="css/AnaSayfa.css">
     <link rel="stylesheet" href="css/iletisimDetay.css">
+    <link rel="shortcut icon" href="../images/admin-panel.png" type="image/x-icon">
 </head>
 <body>
     <div class="sidebar">
