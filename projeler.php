@@ -59,6 +59,7 @@ $conn->close();
         .project-card.visible {
             opacity: 1;
             transform: translateY(0);
+            
         }
 
         .fade-in {

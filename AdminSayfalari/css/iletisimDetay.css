@@ -3,7 +3,7 @@
 /* Ana içerik alanı */
 .content {
     margin-left: 250px;
-    justify-content: center; 
+    justify-content: center;
     padding: 20px;
     font-family: Arial, sans-serif;
     color: white;
@@ -21,21 +21,46 @@ h1 {
 }
 
 .message-details p {
-    
     font-size: 16px;
     line-height: 1.5;
-    
 }
 
-.message-details{
+.message-details {
     background-color: rgba(0, 0, 0, 0.607);
     padding: 15px;
     border-radius: 10px;
     display: inline-block;
+    width: 100%; /* Genişliği yüzde olarak belirleyin */
+    max-width: 600px; /* Maksimum genişlik belirleyin */
 }
 
 .message-details strong {
     display: inline-block;
     width: 100px;
-    
+}
+
+/* Sil Butonu Stili */
+.delete-button {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    color: white;
+    padding: 10px 20px;
+    margin-right: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.delete-button:hover {
+    background-color: #e04343;
+}
+
+/* Butonun Konumu */
+form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Butonu ortalar */
 }

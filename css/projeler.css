@@ -29,7 +29,6 @@ body {
     transition: transform 0.4s ease, border-color 0.4s ease, border-width 0.4s ease, opacity 0.3s ease, background-color 0.5 ease !important; /* Opaklık geçiş süresi artırıldı */
     background-color: #ffffffaa;
     position: relative;
-    opacity: 0;
     transform: translateY(20px);
 }
 
@@ -37,10 +36,11 @@ body {
 .project-card:hover {
     transform: scale(1.02) !important; /* Kartın hover durumunda büyümesi */
     border-color: rgba(255, 0, 0, 0.603);
-    
+    transition: background-color 0.5 ease;
+    background-color: #ffffffea;
     border-width: 2px; /* Sınır genişliği */
     border-radius: 8px; /* Yuvarlatılmış köşeler */
-    opacity: 1 !important; /* Hover durumunda opaklık */
+     /* Hover durumunda opaklık */
 }
 
 

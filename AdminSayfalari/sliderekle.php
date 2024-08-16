@@ -90,7 +90,7 @@ if(isset($_POST['ekle'])) {
             <textarea id="icerik" name="icerik" required></textarea><br>
 
             <label for="tarih">Tarih:</label>
-            <input type="date" id="tarih" name="tarih" required><br>
+            <input type="date" id="tarih" name="tarih" required><br><br>
 
             <label for="resim">Resim:</label>
             <input type="file" id="resim" name="resim" accept="image/*" required><br>

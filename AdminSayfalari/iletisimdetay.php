@@ -13,6 +13,22 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $stmt->execute();
     $result = $stmt->get_result();
     $message = $result->fetch_assoc();
+    
+    // Silme işlemi
+    if (isset($_POST['delete'])) {
+        $deleteSql = "DELETE FROM iletisim WHERE id = ?";
+        $deleteStmt = $conn->prepare($deleteSql);
+        $deleteStmt->bind_param("i", $id);
+        if ($deleteStmt->execute()) {
+            echo "<script>
+                    alert('Mesaj başarıyla silindi!');
+                    window.location.href = 'iletisimYonetimi.php';
+                  </script>";
+            exit();
+        } else {
+            echo "<script>alert('Silme işlemi başarısız oldu.');</script>";
+        }
+    }
 } else {
     // ID verilmemişse veya geçersizse yönlendirme
     header("Location: iletisimYonetimi.php");
@@ -60,6 +76,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             <p><strong>E-posta:</strong> <?php echo htmlspecialchars($message['eposta']); ?></p>
             <p><strong>Mesaj:</strong> <?php echo nl2br(htmlspecialchars($message['mesaj'])); ?></p>
         </div>
+        <form method="POST" action="">
+            <button type="submit" name="delete" class="delete-button">Mesajı Sil</button>
+        </form>
     </div>
 </body>
 </html>
