@@ -30,7 +30,7 @@
 
     <div class="main-content">
         <div class="logoo">
-            <img src="../images/logo-tur.png" alt="Logo" class="logo-image">
+            <img src="../images/Ornek.png" alt="Logo" class="logo-image">
         </div>
         <div class="welcome-message">
             <h1>Altınay Savunma Teknolojileri A.Ş. Web Sayfası Paneline Hoşgeldiniz</h1>

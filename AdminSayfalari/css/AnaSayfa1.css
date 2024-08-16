@@ -4,8 +4,6 @@ body {
     padding: 0;
 }
 
-
-
 /* Main content styles */
 .main-content {
     margin-left: 250px;
@@ -15,6 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 93vh; /* Ensure the content takes up the full height of the viewport */
+    text-align: center; /* Center the text within the main content */
 }
 
 .logoo {
@@ -22,10 +21,11 @@ body {
     background-color: #00000019;
     padding: 20px;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.759), transparent);
-
     border-radius: 15px;
     position: relative;
-    display: inline-block;
+    display: flex; /* Flexbox layout for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     overflow: hidden;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .logo-image {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     opacity: 0;
     transform: translateY(-50px);
@@ -66,13 +66,14 @@ body {
     z-index: 2;
 }
 
+
+
 .welcome-message {
     text-align: center;
     margin-bottom: 0;
     font-size: 1.25rem;
     text-shadow: 2px 2px 2px #8b8b8b;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.496), transparent);
-
 }
 
 .welcome-message h1 {

@@ -58,6 +58,7 @@ body {
     padding: 10px;
     border-bottom: 1px solid #333;
     transition: background 0.5s ease, color 0.5s ease; /* Geçiş süreleri */
+    border-radius: 5px;
 }
 
 .menu ul li a:hover {

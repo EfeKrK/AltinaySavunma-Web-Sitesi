@@ -34,13 +34,20 @@ h1 {
 .medya-card {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    background-color: #222;
+    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
+    background-color: #222222b1; /* %75 opaklık */
     border: 1px solid #555;
     border-radius: 8px;
     padding: 20px;
     width: 300px;
     position: relative;
+}
+
+.medya-card:hover {
+    transform: translateY(0);
+    opacity: 1;
+    background-color: #222222; /* %100 opaklık */
+    border: 1px solid #555;
 }
 
 /* Kartlar görünür hale geldiğinde uygulanacak stil */
