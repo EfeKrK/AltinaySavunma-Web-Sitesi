@@ -67,7 +67,6 @@ body {
     transition: background 0.5 ease;
 }
 
-
 .menu ul li a.active {
     background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
 }
