@@ -4,9 +4,6 @@ body {
     padding: 0;
 }
 
-
-
-
 .menu ul {
     list-style-type: none;
     padding: 0;
@@ -71,11 +68,9 @@ h1 {
     transition: background 0.5s ease, border-color 0.8s ease, color 0.8s ease, opacity 0.8s ease, transform 0.3s ease !important;
 }
 
-
 .slider-card:hover {
     background-color: #f4f4f4;
     transform: scale(1.01);
-   
 }
 
 .slider-card h3 {
@@ -105,12 +100,11 @@ h1 {
     margin-top: 20px;
 }
 
-.add-button{
+.add-button {
     background: linear-gradient(45deg, rgba(13, 255, 0, 0.9), rgba(178, 255, 168, 0.9));
     text-decoration: none;
     color: white;
     border: none;
-    border-color: white;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -119,11 +113,9 @@ h1 {
     margin-top: 20px;
 }
 
-.add-button:hover{
+.add-button:hover {
     background-color: rgb(55, 255, 0);
     opacity: 1;
-    
-    
 }
 
 .delete-button:hover {
@@ -148,6 +140,6 @@ h1 {
     background-color: #f44336;
 }
 
-.checkbox{
-    
+.project-checkbox{
+    width: 15px;
 }

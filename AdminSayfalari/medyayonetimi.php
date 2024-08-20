@@ -109,6 +109,18 @@ $result = $conn->query($sql);
                 window.location.href = window.location.href; // Sayfayı yeniden yükle
             });
         <?php endif; ?>
+
+        // Kartlara tıklama olayı ekleme
+        const mediaCards = document.querySelectorAll('.medya-card');
+        mediaCards.forEach(card => {
+            card.addEventListener('click', function(event) {
+                const checkbox = card.querySelector('input[type="checkbox"]');
+                // Eğer checkbox dışında bir yere tıklanmışsa checkbox'ın işaret durumunu değiştir
+                if (!event.target.matches('input[type="checkbox"]')) {
+                    checkbox.checked = !checkbox.checked;
+                }
+            });
+        });
     });
     </script>
 </body>

@@ -47,3 +47,18 @@ h1 {
     cursor: pointer;
     border-radius: 10px;
 }
+
+
+.message-table td:hover {
+    border: 1px solid #696969;
+    padding: 8px;
+    border-radius: 0px !important;
+    border: none !important;
+}
+
+.message-table th:hover {
+    border: 1px solid #696969;
+    padding: 8px;
+    border-radius: 0px !important;
+    border: none !important;
+}

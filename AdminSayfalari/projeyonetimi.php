@@ -81,7 +81,7 @@ $result = $conn->query($sql);
                                     <p><strong>Detay 3:</strong> <?php echo nl2br(htmlspecialchars($row['detay3'])); ?></p>
                                 <?php endif; ?>
                                 <p><strong>Tarih:</strong> <?php echo htmlspecialchars($row['tarih']); ?></p>
-                                <input type="checkbox" name="ids[]" value="<?php echo $row['id']; ?>">
+                                <input type="checkbox" name="ids[]" value="<?php echo $row['id']; ?>" class="project-checkbox">
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -98,58 +98,71 @@ $result = $conn->query($sql);
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-    // SweetAlert mesajlarını yönetme
-    <?php if (!empty($alertMessage)): ?>
-        Swal.fire({
-            title: '<?php echo strpos($alertMessage, "Hata") !== false ? "Hata" : "Başarı"; ?>',
-            text: '<?php echo $alertMessage; ?>',
-            icon: '<?php echo strpos($alertMessage, "Hata") !== false ? "error" : "success"; ?>',
-            confirmButtonText: 'Tamam'
-        });
-    <?php endif; ?>
+            // SweetAlert mesajlarını yönetme
+            <?php if (!empty($alertMessage)): ?>
+                Swal.fire({
+                    title: '<?php echo strpos($alertMessage, "Hata") !== false ? "Hata" : "Başarı"; ?>',
+                    text: '<?php echo $alertMessage; ?>',
+                    icon: '<?php echo strpos($alertMessage, "Hata") !== false ? "error" : "success"; ?>',
+                    confirmButtonText: 'Tamam'
+                });
+            <?php endif; ?>
 
-    // Checkbox seçimini kontrol eden form doğrulama
-    document.getElementById('projectForm').addEventListener('submit', function(event) {
-        const checkboxes = document.querySelectorAll('input[name="ids[]"]:checked');
-        if (checkboxes.length === 0) {
-            Swal.fire({
-                title: 'Uyarı',
-                text: 'Lütfen en az bir proje seçiniz!',
-                icon: 'warning',
-                confirmButtonText: 'Tamam'
+            // Checkbox seçimini kontrol eden form doğrulama
+            document.getElementById('projectForm').addEventListener('submit', function(event) {
+                const checkboxes = document.querySelectorAll('input[name="ids[]"]:checked');
+                if (checkboxes.length === 0) {
+                    Swal.fire({
+                        title: 'Uyarı',
+                        text: 'Lütfen en az bir proje seçiniz!',
+                        icon: 'warning',
+                        confirmButtonText: 'Tamam'
+                    });
+                    event.preventDefault(); // Formun gönderilmesini engelle
+                }
             });
-            event.preventDefault(); // Formun gönderilmesini engelle
-        }
-    });
 
-    // Kartların sırayla gelmesi için animasyon
-    const cards = document.querySelectorAll('.project-card');
-    cards.forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add('visible');
-        }, index * 200); // Her kart için 200ms gecikme
-    });
-
-    // Slider işlevselliği
-    const sliders = document.querySelectorAll('.project-slider');
-    sliders.forEach(slider => {
-        const images = slider.querySelectorAll('.slider-images img');
-        let currentIndex = 0;
-
-        const showImage = (index) => {
-            images.forEach((img, i) => {
-                img.style.display = i === index ? 'block' : 'none';
+            // Kartların sırayla gelmesi için animasyon
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 200); // Her kart için 200ms gecikme
             });
-        };
 
-        showImage(currentIndex);
+            // Slider işlevselliği
+            const sliders = document.querySelectorAll('.project-slider');
+            sliders.forEach(slider => {
+                const images = slider.querySelectorAll('.slider-images img');
+                let currentIndex = 0;
 
-        slider.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
+                const showImage = (index) => {
+                    images.forEach((img, i) => {
+                        img.style.display = i === index ? 'block' : 'none';
+                    });
+                };
+
+                showImage(currentIndex);
+
+                slider.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showImage(currentIndex);
+                });
+            });
+
+            // Kartlara tıklama olayını ekleyin
+            const projectCards = document.querySelectorAll('.project-card');
+
+            projectCards.forEach(card => {
+                card.addEventListener('click', function(event) {
+                    // Eğer checkbox veya kartın içindeki başka bir element tıklanmadıysa
+                    if (!event.target.classList.contains('project-checkbox')) {
+                        const checkbox = card.querySelector('.project-checkbox');
+                        checkbox.checked = !checkbox.checked; // Checkbox'ı işaretle veya kaldır
+                    }
+                });
+            });
         });
-    });
-});
     </script>
 </body>
 </html>

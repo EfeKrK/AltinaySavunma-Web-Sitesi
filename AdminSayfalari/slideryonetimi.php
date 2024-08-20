@@ -85,7 +85,7 @@ $result = $conn->query($sql);
                                 <p><strong>Özet:</strong> <?php echo htmlspecialchars($row['özet']); ?></p>
                                 <p><strong>İçerik:</strong> <?php echo nl2br(htmlspecialchars($row['icerik'])); ?></p>
                                 <p><strong>Tarih:</strong> <?php echo htmlspecialchars($row['tarih']); ?></p>
-                                <input type="checkbox" name="ids[]" value="<?php echo $row['id']; ?>">
+                                <input type="checkbox" name="ids[]" value="<?php echo $row['id']; ?>" class="slider-checkbox">
                             </div>
                         </div>
                         <?php $index++; ?>
@@ -96,7 +96,6 @@ $result = $conn->query($sql);
             </div>
             <button type="submit" name="delete" class="delete-button">Sil Seçilenler</button>
             <a href="sliderekle.php" class="add-button">Yeni Ekle</a>
-
         </form>
     </div>
 
@@ -147,8 +146,20 @@ $result = $conn->query($sql);
 
             const observer = new IntersectionObserver(observerCallback, observerOptions);
             sliders.forEach(slider => observer.observe(slider));
+
+            // Kartlara tıklama olayını ekleyin
+            const sliderCards = document.querySelectorAll('.slider-card');
+
+            sliderCards.forEach(card => {
+                card.addEventListener('click', function(event) {
+                    // Eğer checkbox veya kartın içindeki başka bir element tıklanmadıysa
+                    if (!event.target.classList.contains('slider-checkbox')) {
+                        const checkbox = card.querySelector('.slider-checkbox');
+                        checkbox.checked = !checkbox.checked; // Checkbox'ı işaretle veya kaldır
+                    }
+                });
+            });
         });
     </script>
 </body>
 </html>
-
