@@ -128,7 +128,7 @@ $conn->close();
                         <div class="project-card-body">
                             <h3 class="project-title"><?php echo htmlspecialchars($project['isim']); ?></h3>
                             <p class="project-date">Tarih: <?php echo htmlspecialchars($project['tarih']); ?></p>
-                            <p class="project-detail"><?php echo htmlspecialchars(substr($project['detay'], 0, 200)) . (strlen($project['detay']) > 200 ? '...' : ''); ?></p>
+                            <p class="project-detail"><?php echo htmlspecialchars(substr($project['detay'], 0, 180)) . (strlen($project['detay']) > 150 ? '...' : ''); ?></p>
                             <a href="proje_detay.php?id=<?php echo $project['id']; ?>" class="btn btn-primary">Detaya Git</a>
                         </div>
                     </div>

@@ -32,6 +32,7 @@ h1 {
     text-align: center;
     text-shadow: 1px 1px 1px #999;
     color: white;
+    
 }
 
 p {
@@ -72,13 +73,16 @@ p {
     
 }
 
-.col-md-6 {
-    flex: 1;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.685);
-    padding: 25px !important;
-    border-radius: 10px;
+.aciklama{
+    background-color: rgba(0, 0, 0, 0.59);
+    padding:30px;
+    border-radius: 15px;
     backdrop-filter: blur(10px);
+}
+
+.col-md-6 {
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .col-md-6 img {

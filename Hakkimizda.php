@@ -78,11 +78,59 @@ $resimDataUrl = 'data:' . $resimMimeType . ';base64,' . $resimBase64;
     </div>
 </div>
 
+
+
+
+
 <footer class="footer mt-auto py-2">
     <div class="footer-container text-center">
         <span class="text-muted">Altınay Savunma Teknolojileri A.Ş. &copy; 2024. Tüm hakları saklıdır.</span>
     </div>
 </footer>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const container = document.querySelector(".container.mt-4");
+    const row = document.querySelector(".row");
+
+    // Ensure the container is initially hidden
+    container.style.opacity = 0;
+    container.style.transform = "translateY(20px)";
+    container.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+    
+    // Apply a delay to the fade-in effect for the container
+    setTimeout(() => {
+        container.style.opacity = 1;
+        container.style.transform = "translateY(0)";
+    }, 100); // 100ms delay before starting the fade-in effect
+
+    // Animate the .row element
+    row.style.opacity = 0; // Initially hidden
+    row.style.transform = "translateY(20px)"; // Initially offset
+    row.style.transition = "opacity 1s ease-out, transform 1s ease-out"; // Transition for fade-in and slide-up
+
+    // Apply a delay to the .row animation
+    setTimeout(() => {
+        row.style.opacity = 1;
+        row.style.transform = "translateY(0)";
+    }, 200); // 200ms delay before starting the .row animation
+
+    // Optional: If you have multiple elements within the .row that you want to animate in sequence
+    const elements = row.querySelectorAll('img, h2, p'); // Select all child elements to animate in sequence
+
+    elements.forEach((element, index) => {
+        setTimeout(() => {
+            element.style.opacity = 1;
+            element.style.transform = "translateY(0)";
+            element.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+        }, index * 200); // Stagger the animations by 200ms for each element
+    });
+});
+</script>
+
+
 
 </body>
 </html>

@@ -69,11 +69,10 @@ $conn->close();
     <div class="row mb-4 fade-in">
         <div class="col-md-6">
             <img src="<?php echo $resimDataUrl; ?>" alt="<?php echo htmlspecialchars($medya['baslik']); ?>" class="img-fluid">
-            <p><?php echo nl2br(htmlspecialchars($detay)); ?></p>
-
         </div>
-        
     </div>
+
+    <div class="aciklama"><p><?php echo nl2br(htmlspecialchars($detay)); ?></p></div>
 </div>
 
 <footer class="footer mt-auto py-2">

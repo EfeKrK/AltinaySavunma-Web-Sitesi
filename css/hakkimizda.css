@@ -45,11 +45,13 @@ p {
     max-width: 70%; /* Resim genişliği %100 */
     height: auto; /* Yüksekliği otomatik */
     background-repeat: no-repeat;
+    filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.737));
     
 }
 
 /* İçerik Kutusu */
 .container.mt-5 {
+    
     padding-top: 15%;
     display: flex;
     justify-content: center;
@@ -58,28 +60,30 @@ p {
     position: relative;
 }
 
+.container {
+    opacity: 0; /* Başlangıçta görünmez */
+    transform: translateY(20px); /* Başlangıçta aşağı kaydırılmış */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Geçiş efektleri */
+}
+
 /* Satır Stili */
-
-
-
 .row {
-    background-color: rgba(129, 129, 129, 0.7); /* Yarı saydam arka plan rengi */
-    backdrop-filter: blur(10px);
-    border-radius: 15px; /* Köşe yuvarlatma */
+    background-color: rgba(129, 129, 129, 0.7);
+    backdrop-filter: blur(0px); /* Start with no blur */
+    -webkit-backdrop-filter: blur(0px); /* For Safari support */
+    border-radius: 15px;
     padding: 15px;
-    transition: transform 0.3s ease-in-out;
+    transition: backdrop-filter 0.6s ease, transform 0.3s ease-in-out !important; /* Add transition for backdrop-filter */
     z-index: 1;
-    /*border: 2px solid rgba(255, 0, 0, 0.8); /* Sınır rengi */
-    font-weight: 300px;
     display: flex;
     align-items: center;
     margin-top: 5% !important;
-    
 }
 
-/* Hover Efekti */
 .row:hover {
-    transform: scale(1.01); /* Hover efektiyle biraz büyütme */
+    backdrop-filter: blur(10px); /* Apply blur effect on hover */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    transform: scale(1.01) !important;
 }
 
 /* Responsive Stiller */
@@ -132,14 +136,13 @@ p {
 }
 
 .container.mt-5 {
-    padding-top: 10%; /* Üstten boşluğu azaltarak yukarı taşıyın */
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
     position: relative;
 }
-
 
 .social-media-icons {
     margin-top: 15px !important;
