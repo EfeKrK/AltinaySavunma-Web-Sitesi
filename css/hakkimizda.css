@@ -1,6 +1,9 @@
- 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+
 * {
     box-sizing: border-box; /* Padding ve border hesaplamasını içerir */
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -29,7 +32,7 @@ h2 {
 
 /* Paragraf Stili */
 p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 40px;
     text-align: justify;
@@ -60,7 +63,8 @@ p {
 
 
 .row {
-    background-color: rgba(129, 129, 129, 0.8); /* Yarı saydam arka plan rengi */
+    background-color: rgba(129, 129, 129, 0.7); /* Yarı saydam arka plan rengi */
+    backdrop-filter: blur(10px);
     border-radius: 15px; /* Köşe yuvarlatma */
     padding: 15px;
     transition: transform 0.3s ease-in-out;

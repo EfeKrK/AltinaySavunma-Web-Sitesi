@@ -1,4 +1,11 @@
 /* Genel Stiller */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
 html, body {
     overflow-x: hidden; /* Yatay kaydırmayı devre dışı bırakır */
     overflow-y: auto; /* Dikey kaydırmaya izin verir */
@@ -36,7 +43,6 @@ body {
 .project-card:hover {
     transform: scale(1.02) !important; /* Kartın hover durumunda büyümesi */
     border-color: rgba(255, 0, 0, 0.603);
-    transition: background-color 0.5 ease;
     background-color: #ffffffea;
     border-width: 2px; /* Sınır genişliği */
     border-radius: 8px; /* Yuvarlatılmış köşeler */
@@ -59,7 +65,7 @@ body {
 /* Kart Başlığı */
 .project-title {
     
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 

@@ -28,6 +28,13 @@ body {
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+}
+
+.wrapper:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.69);
+    transform: scale(1.01);
 }
 
 .wrapper h1 {
@@ -109,7 +116,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background: rgb(255, 0, 0);
+    background: rgb(0, 255, 13);
     transition: width 0.5s ease;
     z-index: -1;
 }
@@ -120,7 +127,7 @@ body {
 
 .wrapper .btn:hover {
     box-shadow: 0 0 10px rgba(20, 0, 0, 0.3);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .logo {

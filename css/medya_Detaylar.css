@@ -1,5 +1,11 @@
 /* medya_Detaylar.css */
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
 html, body {
     overflow-x: hidden !important;
     overflow-y: auto !important;
@@ -63,6 +69,7 @@ p {
     flex-wrap: wrap;
     margin-top: 20px;
     justify-content: center;
+    
 }
 
 .col-md-6 {
@@ -71,6 +78,7 @@ p {
     background-color: rgba(0, 0, 0, 0.685);
     padding: 25px !important;
     border-radius: 10px;
+    backdrop-filter: blur(10px);
 }
 
 .col-md-6 img {

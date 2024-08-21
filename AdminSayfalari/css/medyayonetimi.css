@@ -41,6 +41,7 @@ h1 {
     padding: 20px;
     width: 300px;
     position: relative;
+    backdrop-filter: blur(10px);
 }
 
 .medya-card:hover {
