@@ -83,7 +83,7 @@ p {
 .row:hover {
     backdrop-filter: blur(10px); /* Apply blur effect on hover */
     -webkit-backdrop-filter: blur(10px); /* For Safari support */
-    transform: scale(1.01) !important;
+    
 }
 
 /* Responsive Stiller */
