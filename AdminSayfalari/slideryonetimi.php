@@ -1,4 +1,5 @@
 <?php
+include 'GirisKontrol.php';
 include 'database.php'; // Include the database connection
 
 // Handle delete request

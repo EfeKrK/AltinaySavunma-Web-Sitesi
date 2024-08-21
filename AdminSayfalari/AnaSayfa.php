@@ -1,3 +1,8 @@
+<?php
+include 'GirisKontrol.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

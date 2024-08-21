@@ -1,4 +1,5 @@
 <?php
+include 'GirisKontrol.php';
 // Veritabanı bağlantısını sağlayan dosyayı içe aktar
 include 'database.php';
 
