@@ -15,7 +15,7 @@ Ana Özellikler:
   
 Bu dinamik web sitesi, Altınay Savunma Teknolojileri'nin teknolojik ve endüstriyel katkılarını etkili bir şekilde tanıtarak, sektördeki varlığını güçlendirmeyi amaçlamaktadır.
 
--Sql Dosyası ".Sql" olarak exportu dosyaların arasındadır. İmport ederek veritabanını kullanabailirsiniz
+-Sql Dosyası ".Sql" olarak exportu dosyaların arasındadır. İmport ederek veritabanını kullanabilirsiniz
 
 
 <h2>Halen daha geliştirilme aşamasındadır (07.08.2024)</h2>
