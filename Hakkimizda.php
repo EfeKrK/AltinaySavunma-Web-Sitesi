@@ -11,31 +11,27 @@
     <link rel="shortcut icon" href="images/sekmelogosu.png" type="image/x-icon">
 </head>
 <body>
-    
-<!-- Sekme Logosunda problem yarattığı için body içine aldım -->
+
 <?php
 include 'database.php';
 include 'bootstrap.php';
 
-// Veritabanı sorgusu
+// Hakkımızda bilgilerini al
 $hakkimizdaQuery = "SELECT * FROM hakkimizda";
 $hakkimizdaResult = $conn->query($hakkimizdaQuery);
-
-// Hakkımızda bilgilerini dizi olarak al
 $hakkimizdaBilgileri = $hakkimizdaResult->fetch_assoc();
 
-// Başlık, açıklama ve resim verilerini değişkenlere ata
 $baslik = $hakkimizdaBilgileri['baslik'];
 $aciklama = $hakkimizdaBilgileri['aciklama'];
-$resimBlob = $hakkimizdaBilgileri['resim']; // Resim verisi
-
-// BLOB verisini base64 formatına çevir
+$resimBlob = $hakkimizdaBilgileri['resim'];
 $resimBase64 = base64_encode($resimBlob);
-$resimMimeType = 'image/jpeg'; // Resim formatı, örneğin jpeg, png vs.
+$resimMimeType = 'image/jpeg';
 $resimDataUrl = 'data:' . $resimMimeType . ';base64,' . $resimBase64;
+
+// Yönetim ekibi bilgilerini al
+$yonetimQuery = "SELECT * FROM yonetimekibi Where id=1";
+$yonetimResult = $conn->query($yonetimQuery);
 ?>
-
-
 
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
@@ -58,29 +54,44 @@ $resimDataUrl = 'data:' . $resimMimeType . ';base64,' . $resimBase64;
     </div>
 </nav>
 
-
 <div class="container mt-4 position-relative">
-    <div class="row">
-        <div class="col-md-4">
+    <!-- Hakkımızda Bölümü -->
+    <div class="row mb-5 align-items-center">
+        <div class="col-md-4 text-center">
             <img src="<?php echo $resimDataUrl; ?>" alt="Hakkımızda" class="img-fluid hakkimizda-resim">
         </div>
         <div class="col-md-8">
             <h2><?php echo $baslik; ?></h2>
             <p><?php echo $aciklama; ?></p>
         </div>
+    </div>
+
+    <!-- Yönetim Ekibi Bölümü -->
+    
+    <div class="row2 mb-5">
         
-        <div class="social-media-icons">
-            <a href="https://www.facebook.com/altinaysavunma" target="_blank" class="fab fa-facebook"></a>
-            <a href="https://twitter.com/altinaysavunma" target="_blank" class="fab fa-x-twitter"></a>
-            <a href="https://tr.linkedin.com/company/altinaysavunma" target="_blank" class="fab fa-linkedin"></a>
-            <a href="https://www.instagram.com/altinaysavunma/" target="_blank" class="fab fa-instagram"></a>
-        </div>
+        <?php while ($yonetimUye = $yonetimResult->fetch_assoc()): ?>
+            <?php
+            $uyeIsim = $yonetimUye['isim'];
+            $uyeSoyisim = $yonetimUye['soyisim'];
+            $uyeAciklama = $yonetimUye['aciklama'];
+            $uyeResimBlob = $yonetimUye['resim'];
+            $uyeResimBase64 = base64_encode($uyeResimBlob);
+            $uyeResimMimeType = 'image/jpeg';
+            $uyeResimDataUrl = 'data:' . $uyeResimMimeType . ';base64,' . $uyeResimBase64;
+            ?>
+            <div class="row align-items-center mb-4">
+                <div class="col-md-4 text-center">
+                    <img src="<?php echo $uyeResimDataUrl; ?>" alt="<?php echo $uyeIsim . ' ' . $uyeSoyisim; ?>" class="img-fluid yonetim-resim">
+                </div>
+                <div class="col-md-8">
+                    <h3><?php echo 'Kurucumuz - '.$uyeIsim . ' ' . $uyeSoyisim; ?></h3>
+                    <p><?php echo $uyeAciklama; ?></p>
+                </div>
+            </div>
+        <?php endwhile; ?>
     </div>
 </div>
-
-
-
-
 
 <footer class="footer mt-auto py-2">
     <div class="footer-container text-center">
@@ -88,12 +99,10 @@ $resimDataUrl = 'data:' . $resimMimeType . ';base64,' . $resimBase64;
     </div>
 </footer>
 
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector(".container.mt-4");
-    const row = document.querySelector(".row");
+    const rows = document.querySelectorAll(".row");
 
     // Ensure the container is initially hidden
     container.style.opacity = 0;
@@ -106,31 +115,20 @@ document.addEventListener("DOMContentLoaded", function() {
         container.style.transform = "translateY(0)";
     }, 100); // 100ms delay before starting the fade-in effect
 
-    // Animate the .row element
-    row.style.opacity = 0; // Initially hidden
-    row.style.transform = "translateY(20px)"; // Initially offset
-    row.style.transition = "opacity 1s ease-out, transform 1s ease-out"; // Transition for fade-in and slide-up
+    // Animate the .row elements
+    rows.forEach((row, index) => {
+        row.style.opacity = 0; // Initially hidden
+        row.style.transform = "translateY(20px)"; // Initially offset
+        row.style.transition = "opacity 1s ease-out, transform 1s ease-out"; // Transition for fade-in and slide-up
 
-    // Apply a delay to the .row animation
-    setTimeout(() => {
-        row.style.opacity = 1;
-        row.style.transform = "translateY(0)";
-    }, 200); // 200ms delay before starting the .row animation
-
-    // Optional: If you have multiple elements within the .row that you want to animate in sequence
-    const elements = row.querySelectorAll('img, h2, p'); // Select all child elements to animate in sequence
-
-    elements.forEach((element, index) => {
+        // Apply a delay to each .row animation
         setTimeout(() => {
-            element.style.opacity = 1;
-            element.style.transform = "translateY(0)";
-            element.style.transition = "opacity 1s ease-out, transform 1s ease-out";
-        }, index * 200); // Stagger the animations by 200ms for each element
+            row.style.opacity = 1;
+            row.style.transform = "translateY(0)";
+        }, 200 * (index + 1)); // Stagger animations by 200ms each
     });
 });
 </script>
-
-
 
 </body>
 </html>
