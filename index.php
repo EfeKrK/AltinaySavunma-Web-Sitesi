@@ -197,7 +197,7 @@ $conn->close();
                                             <img src="data:image/jpeg;base64,<?= base64_encode($card['resim']) ?>" class="card-img-top" alt="<?= htmlspecialchars($card['baslik']) ?>">
                                             <div class="card-body">
                                                 <h5 class="card-title"><?= htmlspecialchars($card['baslik']) ?></h5>
-                                                <?= htmlspecialchars(mb_substr($card['özet'], 0, 150, 'UTF-8')) ?>...
+                                                <?= htmlspecialchars(mb_substr($card['özet'], 0, 120, 'UTF-8')) ?>...
                                             </div>
                                             <div class="card-footer">
                                                 <a href="medya_Detaylar.php?id=<?= $card['id'] ?>" class="btn btn-primary">Detayları Gör</a>
@@ -209,7 +209,7 @@ $conn->close();
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <!-- Sol ve sağ butonlar -->
+                
                 
             </div>
         </div>

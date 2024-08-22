@@ -11,7 +11,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    padding-top: 5%;
+    padding-top: 1%;
 }
 
 /* Başlık Stili */
@@ -79,7 +79,7 @@ p {
 /* Responsive Stiller */
 @media (max-width: 768px) {
     body {
-        padding-top: 20%;
+        padding-top: 10%;
     }
 
     .container.mt-5 {
@@ -88,8 +88,10 @@ p {
     }
 
     .row {
+        backdrop-filter: blur(10px);
         flex-direction: column;
         margin-top: 20%;
+        border-radius: 0px;
         margin-bottom: 20%;
     }
 
@@ -101,7 +103,9 @@ p {
 
     p {
         font-size: 1.3rem;
-        text-align: center;
+        text-align:justify;
+        text-justify: inter-word;
+        hyphens: auto !important;
         color: #000000;
     }
 
