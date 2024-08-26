@@ -1,3 +1,33 @@
+<?php
+include 'database.php';
+include 'bootstrap.php';
+
+$refreshPage = false;  // Sayfa yenileme bayrağı
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Hakkımızda ve yönetim ekibi işlemleri burada
+
+    // Başarılı işlem sonrası sayfanın yenilenmesi gerektiğini belirt
+    $refreshPage = true;
+}
+
+// Hakkımızda bilgilerini al
+$hakkimizdaQuery = "SELECT * FROM hakkimizda";
+$hakkimizdaResult = $conn->query($hakkimizdaQuery);
+$hakkimizdaBilgileri = $hakkimizdaResult->fetch_assoc();
+
+$baslik = $hakkimizdaBilgileri['baslik'];
+$aciklama = $hakkimizdaBilgileri['aciklama'];
+$resimBlob = $hakkimizdaBilgileri['resim'];
+$resimBase64 = base64_encode($resimBlob);
+$resimMimeType = 'image/jpeg';
+$resimDataUrl = 'data:' . $resimMimeType . ';base64,' . $resimBase64;
+
+// Yönetim ekibi bilgilerini al
+$yonetimQuery = "SELECT * FROM yonetimekibi WHERE id=1";
+$yonetimResult = $conn->query($yonetimQuery);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,27 +43,6 @@
 </head>
 <body>
 
-<?php
-include 'database.php';
-include 'bootstrap.php';
-
-// Hakkımızda bilgilerini al
-$hakkimizdaQuery = "SELECT * FROM hakkimizda";
-$hakkimizdaResult = $conn->query($hakkimizdaQuery);
-$hakkimizdaBilgileri = $hakkimizdaResult->fetch_assoc();
-
-$baslik = $hakkimizdaBilgileri['baslik'];
-$aciklama = $hakkimizdaBilgileri['aciklama'];
-$resimBlob = $hakkimizdaBilgileri['resim'];
-$resimBase64 = base64_encode($resimBlob);
-$resimMimeType = 'image/jpeg';
-$resimDataUrl = 'data:' . $resimMimeType . ';base64,' . $resimBase64;
-
-// Yönetim ekibi bilgilerini al
-$yonetimQuery = "SELECT * FROM yonetimekibi Where id=1";
-$yonetimResult = $conn->query($yonetimQuery);
-?>
-
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
@@ -47,7 +56,7 @@ $yonetimResult = $conn->query($yonetimQuery);
             <div class="navbar-nav ms-auto me-5">
                 <a class="nav-link" aria-current="page" href="index.php">Ana Sayfa</a>
                 <a class="nav-link" href="projeler.php">Projeler</a>
-                <a class="nav-link"  href="Medya.php">Medya</a>
+                <a class="nav-link" href="Medya.php">Medya</a>
                 <a class="nav-link active" href="hakkimizda.php">Hakkımızda</a>
                 <a class="nav-link" href="iletisim.php">İletişim</a>
             </div>
@@ -86,7 +95,7 @@ $yonetimResult = $conn->query($yonetimQuery);
                     <img src="<?php echo $uyeResimDataUrl; ?>" alt="<?php echo $uyeIsim . ' ' . $uyeSoyisim; ?>" class="img-fluid yonetim-resim">
                 </div>
                 <div class="col-md-8">
-                    <h3><?php echo 'Kurucumuz - '.$uyeIsim . ' ' . $uyeSoyisim; ?></h3>
+                    <h2><?php echo 'Kurucumuz - '.$uyeIsim . ' ' . $uyeSoyisim; ?></h2>
                     <p><?php echo $uyeAciklama; ?></p>
                 </div>
             </div>
@@ -128,6 +137,13 @@ document.addEventListener("DOMContentLoaded", function() {
             row.style.transform = "translateY(0)";
         }, 200 * (index + 1)); // Stagger animations by 200ms each
     });
+
+    // Eğer sayfa yenileme bayrağı true ise, sayfayı yenile
+    <?php if ($refreshPage): ?>
+        setTimeout(() => {
+            window.location.reload();
+        }, 200); // 200ms sonra sayfayı yenile
+    <?php endif; ?>
 });
 </script>
 

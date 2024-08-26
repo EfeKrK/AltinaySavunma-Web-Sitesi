@@ -7,9 +7,13 @@ include 'database.php';
 $baslik = '';
 $aciklama = '';
 $resim = '';
+$uyeIsim = '';
+$uyeSoyisim = '';
+$uyeAciklama = '';
+$uyeResim = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['update'])) {
+    if (isset($_POST['update_hakkimizda'])) {
         $baslik = $_POST['baslik'];
         $aciklama = $_POST['aciklama'];
 
@@ -33,7 +37,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute();
         $stmt->close();
 
-        $message = "Güncellemeler başarıyla kaydedildi!";
+        // Sayfanın yenilenmesi için yeniden yönlendirme
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit(); // Çıkış yaparak daha fazla kod çalıştırılmasını önleyin
+    }
+
+    if (isset($_POST['update_yonetici'])) {
+        $uyeIsim = $_POST['isim'];
+        $uyeSoyisim = $_POST['soyisim'];
+        $uyeAciklama = $_POST['uyeAciklama'];
+
+        // Yönetici resmi kontrol et
+        if (isset($_FILES['uyeResim']) && $_FILES['uyeResim']['error'] == UPLOAD_ERR_OK) {
+            $uyeResim = file_get_contents($_FILES['uyeResim']['tmp_name']);
+        } else {
+            // Resim seçilmediyse mevcut resmi koru
+            $sql = "SELECT resim FROM yonetimekibi WHERE id = 1";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $uyeResim = $row['resim'];
+            }
+        }
+
+        // Veritabanında güncelleme yap
+        $sql = "UPDATE yonetimekibi SET isim = ?, soyisim = ?, aciklama = ?, resim = ? WHERE id = 1";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('ssss', $uyeIsim, $uyeSoyisim, $uyeAciklama, $uyeResim);
+        $stmt->execute();
+        $stmt->close();
+
+        // Sayfanın yenilenmesi için yeniden yönlendirme
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit(); // Çıkış yaparak daha fazla kod çalıştırılmasını önleyin
     }
 } else {
     // Sayfa yüklendiğinde mevcut verileri al
@@ -45,10 +81,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $aciklama = htmlspecialchars($row['aciklama']);
         $resim = $row['resim'];
     }
+
+    $sql = "SELECT isim, soyisim, aciklama, resim FROM yonetimekibi WHERE id = 1";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $uyeIsim = htmlspecialchars($row['isim']);
+        $uyeSoyisim = htmlspecialchars($row['soyisim']);
+        $uyeAciklama = htmlspecialchars($row['aciklama']);
+        $uyeResim = $row['resim'];
+    }
 }
 
 $conn->close();
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -81,6 +130,7 @@ $conn->close();
 
     <div class="content">
         <h1>Hakkımızda Yönetimi</h1>
+        <!-- Hakkımızda bilgilerini düzenleme formu -->
         <form method="POST" enctype="multipart/form-data" class="form">
             <div class="form-group">
                 <label for="baslik">Başlık:</label>
@@ -97,9 +147,37 @@ $conn->close();
                     <img class="img1" src="data:image/jpeg;base64,<?php echo base64_encode($resim); ?>" alt="Mevcut Resim" style="max-width: 300px; margin-top: 10px;">
                 <?php endif; ?>
             </div>
-            <button type="submit" name="update" class="update-button">Güncelle</button>
+            <button type="submit" name="update_hakkimizda" class="update-button">Güncelle</button>
             <?php if (isset($message)): ?>
                 <p class="message"><?php echo $message; ?></p>
+            <?php endif; ?>
+        </form>
+
+        <!-- Yönetici bilgilerini düzenleme formu -->
+        <h1>Yönetici Bilgilerini Güncelle</h1>
+        <form method="POST" enctype="multipart/form-data" class="form">
+            <div class="form-group">
+                <label for="isim">İsim:</label>
+                <input type="text" id="isim" name="isim" value="<?php echo $uyeIsim; ?>" required>
+            </div>
+            <div class="form-group">
+                <label for="soyisim">Soyisim:</label>
+                <input type="text" id="soyisim" name="soyisim" value="<?php echo $uyeSoyisim; ?>" required>
+            </div>
+            <div class="form-group">
+                <label for="uyeAciklama">Açıklama:</label>
+                <textarea id="uyeAciklama" name="uyeAciklama" rows="4" required><?php echo $uyeAciklama; ?></textarea>
+            </div>
+            <div class="form-group">
+                <label for="uyeResim">Resim:</label>
+                <input type="file" id="uyeResim" name="uyeResim">
+                <?php if ($uyeResim): ?>
+                    <img class="img1" src="data:image/jpeg;base64,<?php echo base64_encode($uyeResim); ?>" alt="Mevcut Resim" style="max-width: 300px; margin-top: 10px;">
+                <?php endif; ?>
+            </div>
+            <button type="submit" name="update_yonetici" class="update-button">Güncelle</button>
+            <?php if (isset($message_yonetici)): ?>
+                <p class="message"><?php echo $message_yonetici; ?></p>
             <?php endif; ?>
         </form>
     </div>
