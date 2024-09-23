@@ -18,4 +18,4 @@ Bu dinamik web sitesi, Altınay Savunma Teknolojileri'nin teknolojik ve endüstr
 -Sql Dosyası ".Sql" olarak exportu dosyaların arasındadır. İmport ederek veritabanını kullanabilirsiniz
 
 
-<h2>Halen daha geliştirilme aşamasındadır (07.08.2024)</h2>
+
